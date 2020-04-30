@@ -1,0 +1,58 @@
+body{
+    background-color:  rgb(61, 61, 61);
+    display: inline;
+}
+
+h1{
+    color: whitesmoke;
+    text-align: center;
+}
+
+#introText{
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+#familyPicture{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  transition: width 2s;
+  border-radius: 10%;
+}
+
+#familyPicture:hover{
+    width: 45%
+}
+
+
+
+#linkDiv{
+    text-align: center;
+    margin-top: 20px;
+    margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+a{  
+    text-align: center;   
+    background-color: red;
+    color: white;
+    padding: .5em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover{
+    background-color: black;
+}
+
+#one {
+background-color:red;
+font: 15px;
+}
