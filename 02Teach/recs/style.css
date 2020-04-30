@@ -1,0 +1,23 @@
+#one {
+background-color:red;
+font: 15px;
+}
+#one:hover{
+    font: 20px bold;
+}
+    
+#two {
+background-color: green;
+font-size: 12pt;
+}
+#two:hover{
+    font: 20px bold;
+}
+    
+#three {
+background-color: blue;
+font-size: 12pt;
+}
+#three:hover{
+    font: 20px bold;
+}
