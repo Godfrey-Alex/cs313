@@ -27,7 +27,7 @@ echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . 
 
 <?php
 function alert() {
-  alert("Added Artoo to cart");
+  echo "Added Artoo to cart";
 }
 
 alert(); // call the function
