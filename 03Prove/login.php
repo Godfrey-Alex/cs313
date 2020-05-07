@@ -17,6 +17,12 @@ echo "Session variables are set.";
 ?>
 
 <?php
+function phpAlert($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+?>
+
+<?php
 // Echo session variables that were set on previous page
 echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
@@ -24,11 +30,7 @@ echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . 
 ?>
 <br>
 <br>
-
-<?php
-function alert() {
-  echo "Added Artoo to cart";
-}
+<?php phpAlert(   "Hello world!\\n\\nPHP has got an Alert Box"   );  ?>
 
 alert(); // call the function
 ?>
