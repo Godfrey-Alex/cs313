@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang = "en">   
 <head>
@@ -14,30 +15,36 @@ $_SESSION["favcolor"] = "green";
 $_SESSION["favanimal"] = "cat";
 $_SESSION["cart"] = array("vader", "lightsaber", "ATST");
 echo "Session variables are set.";
-?>
 
-<?php
 function phpAlert($msg) {
     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
-?>
 
-<?php
 // Echo session variables that were set on previous page
 echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . $_SESSION['cart'][0] . " in my cart.";
-?>
-<br>
-<br>
-<?php phpAlert(   "Hello world!\\n\\nPHP has got an Alert Box"   );  ?>
 
+if(array_key_exists('Alert', $_POST)) { 
+  phpAlert("test"); 
+} 
+else if(array_key_exists('Alert', $_POST)) { 
+  phpAlert("test"); 
+} 
+?>
+
+<br>
+<br>
+<?php phpAlert("Hello world!\\n\\nPHP has got an Alert Box");  ?>
+
+<form method="post">
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
   <p>Remote Control R2-D2<br>$29.99</p>
-  <input type="checkbox" name="item[]" value="R2-D2"> Add to cart<br>
-  <button onclick="addArtoo()">Add to cart</button>
+  <input type="submit" name="Alert" class="button" value="Alert" />   
+  <!--<button onclick="addArtoo()">Add to cart</button>
   <button onclick="addATST()">Add to cart</button>
-  <button onclick="addArtoo()">Add to cart</button>
+  <button onclick="addArtoo()">Add to cart</button>-->
+  </form>
 <br>
 <br>
 
