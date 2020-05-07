@@ -41,7 +41,7 @@ if(array_key_exists('Alert', $_POST)) {
   phpAlert("test"); 
 } 
 else if(array_key_exists('artoo', $_POST)) { 
-  //addR2cart() 
+  addR2cart(); 
 }
 else if(array_key_exists('atst', $_POST)) { 
   phpAlert("AT-ST added to cart"); 
