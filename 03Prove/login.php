@@ -11,25 +11,47 @@ session_start();
 <body>
 
 <?php
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
+$_SESSION["favcolor"] = "Red";
+$_SESSION["favanimal"] = "Honey Badger";
 $_SESSION["cart"] = array("vader", "lightsaber", "ATST");
 echo "Session variables are set.";
-
-function phpAlert($msg) {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-}
-
-// Echo session variables that were set on previous page
 echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . $_SESSION['cart'][0] . " in my cart.";
 
+function phpAlert($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+function addR2cart() {
+  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+function addATSTcart() {
+  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+function addVadercart() {
+  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+function addLightSabercart() {
+  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+
+// Echo session variables that were set on previous page
+
+
 if(array_key_exists('Alert', $_POST)) { 
   phpAlert("test"); 
 } 
-else if(array_key_exists('Alert', $_POST)) { 
-  phpAlert("test"); 
+else if(array_key_exists('artoo', $_POST)) { 
+  phpAlert("Artoo added to cart"); 
+}
+else if(array_key_exists('atst', $_POST)) { 
+  phpAlert("AT-ST added to cart"); 
+}
+else if(array_key_exists('vader', $_POST)) { 
+  phpAlert("Vader added to cart"); 
+}
+else if(array_key_exists('saber', $_POST)) { 
+  phpAlert("Sabers added to cart"); 
 } 
 ?>
 
@@ -40,10 +62,19 @@ else if(array_key_exists('Alert', $_POST)) {
 <form method="post">
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
   <p>Remote Control R2-D2<br>$29.99</p>
-  <input type="submit" name="Alert" class="button" value="Alert" />   
-  <!--<button onclick="addArtoo()">Add to cart</button>
-  <button onclick="addATST()">Add to cart</button>
-  <button onclick="addArtoo()">Add to cart</button>-->
+  <input type="submit" class="button" name="artoo" value="Add to Cart" />  
+
+  <img src="images/ATST.PNG" alt="AT-ST" height=25% width=auto><br>
+  <p>Model AT-ST<br>$45.99</p>
+  <input type="submit" class="button" name="atst" value="Add to Cart"/>
+
+  <img src="images/DarthVader.PNG" alt="Darth Vader" height=25% width=auto><br>
+  <p>Darth Vader Mask<br>$59.99</p>
+  <input type="submit" class="button" name="vader" value="Add to Cart"/>
+
+  <img src="images/lightSaber.PNG" alt="Light Saber" height=25% width=auto><br>
+  <p>LightSaber Collection Set<br>$129.99</p>
+  <input type="submit" class="button" name="saber" value="Add to Cart"/>
   </form>
 <br>
 <br>
