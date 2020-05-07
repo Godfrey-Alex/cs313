@@ -59,19 +59,19 @@ else if(array_key_exists('saber', $_POST)) {
 <form method="post">
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
   <p>Remote Control R2-D2<br>$29.99</p><br>
-  <input type="submit" class="button" name="artoo" value="Add to Cart" />  
+  <input type="submit" class="button" name="artoo" value="Add to Cart" /><br>
 
   <img src="images/ATST.PNG" alt="AT-ST" height=25% width=auto><br>
   <p>Model AT-ST<br>$45.99</p><br>
-  <input type="submit" class="button" name="atst" value="Add to Cart"/>
+  <input type="submit" class="button" name="atst" value="Add to Cart"/><br>
 
   <img src="images/DarthVader.PNG" alt="Darth Vader" height=25% width=auto><br>
   <p>Darth Vader Mask<br>$59.99</p><br>
-  <input type="submit" class="button" name="vader" value="Add to Cart"/>
+  <input type="submit" class="button" name="vader" value="Add to Cart"/><br>
 
   <img src="images/lightSaber.PNG" alt="Light Saber" height=25% width=auto><br>
   <p>LightSaber Collection Set<br>$129.99</p><br>
-  <input type="submit" class="button" name="saber" value="Add to Cart"/>
+  <input type="submit" class="button" name="saber" value="Add to Cart"/><br>
   </form>
 <br>
 <br>
