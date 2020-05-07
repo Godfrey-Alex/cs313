@@ -24,13 +24,22 @@ echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . 
 ?>
 <br>
 <br>
+
+<?php
+function alert() {
+  alert("Added Artoo to cart");
+}
+
+alert(); // call the function
+?>
+
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
   <p>Remote Control R2-D2<br>$29.99</p>
   <input type="checkbox" name="item[]" value="R2-D2"> Add to cart<br>
   <button onclick="addArtoo()">Add to cart</button>
   <button onclick="addATST()">Add to cart</button>
   <button onclick="addArtoo()">Add to cart</button>
-  <br>
+<br>
 <br>
 
 <form action="login.php" method="post" id="frmLogin">
