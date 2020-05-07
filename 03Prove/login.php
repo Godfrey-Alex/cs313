@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang = "en">   
 <head>
-<title>Login</title>
+<title>Nerd Store</title>
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -35,9 +35,6 @@ function addLightSabercart() {
   echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
 
-// Echo session variables that were set on previous page
-
-
 if(array_key_exists('Alert', $_POST)) { 
   phpAlert("test"); 
 } 
@@ -57,23 +54,23 @@ else if(array_key_exists('saber', $_POST)) {
 
 <br>
 <br>
-<?php phpAlert("Hello world!\\n\\nPHP has got an Alert Box");  ?>
+<?php //phpAlert("Hello world!\\n\\nPHP has got an Alert Box");  ?>
 
 <form method="post">
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
-  <p>Remote Control R2-D2<br>$29.99</p>
+  <p>Remote Control R2-D2<br>$29.99</p><br>
   <input type="submit" class="button" name="artoo" value="Add to Cart" />  
 
   <img src="images/ATST.PNG" alt="AT-ST" height=25% width=auto><br>
-  <p>Model AT-ST<br>$45.99</p>
+  <p>Model AT-ST<br>$45.99</p><br>
   <input type="submit" class="button" name="atst" value="Add to Cart"/>
 
   <img src="images/DarthVader.PNG" alt="Darth Vader" height=25% width=auto><br>
-  <p>Darth Vader Mask<br>$59.99</p>
+  <p>Darth Vader Mask<br>$59.99</p><br>
   <input type="submit" class="button" name="vader" value="Add to Cart"/>
 
   <img src="images/lightSaber.PNG" alt="Light Saber" height=25% width=auto><br>
-  <p>LightSaber Collection Set<br>$129.99</p>
+  <p>LightSaber Collection Set<br>$129.99</p><br>
   <input type="submit" class="button" name="saber" value="Add to Cart"/>
   </form>
 <br>
