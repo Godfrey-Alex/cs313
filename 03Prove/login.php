@@ -52,6 +52,8 @@ else if(array_key_exists('vader', $_POST)) {
 else if(array_key_exists('saber', $_POST)) { 
   phpAlert("Sabers added to cart"); 
 } 
+print_r($_SESSION);
+
 ?>
 
 <br>
