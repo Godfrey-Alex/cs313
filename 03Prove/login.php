@@ -23,7 +23,9 @@ function phpAlert($msg) {
     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
 function addR2cart() {
-  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+  //echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+  array_push($_SESSION['cart'],"Test Item");
+
 }
 function addATSTcart() {
   echo '<script type="text/javascript">alert("' . $msg . '")</script>';
