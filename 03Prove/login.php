@@ -22,7 +22,16 @@ echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . $_SESSION['cart'][0] . " in my cart.";
 ?>
-
+<br>
+<br>
+<img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
+  <p>Remote Control R2-D2<br>$29.99</p>
+  <input type="checkbox" name="item[]" value="R2-D2"> Add to cart<br>
+  <button onclick="addArtoo()">Add to cart</button>
+  <button onclick="addATST()">Add to cart</button>
+  <button onclick="addArtoo()">Add to cart</button>
+  <br>
+<br>
 
 <form action="login.php" method="post" id="frmLogin">
   <div><label for="login">Username</label></div>
@@ -46,5 +55,7 @@ echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . 
 
   <div><input type="submit" name="login" value="go to cart"></span></div>  
 </form>
+
+<script src="cart.js"></script>
 </body>
 </html>
