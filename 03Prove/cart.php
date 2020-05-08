@@ -16,7 +16,7 @@ $_SESSION["total"] = 0;
 
 <form method="post">
 <button type="submit" formaction="/03Prove/login.php">Continue Shopping</button>
-<button type="submit" formaction="/03Prove/checkout.php">Checkout</button>
+<button type="submit" formaction="/03Prove/checkout.php">Checkout</button><br>
 </form>
 
 <div>
