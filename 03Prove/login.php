@@ -60,7 +60,11 @@ print_r($_SESSION);
 <br>
 <br>
 <?php //phpAlert("Hello world!\\n\\nPHP has got an Alert Box");  ?>
+<div id='cartDiv'>
+<h3 id='cart'>Items in cart:<?php echo var_dump(count($_SESSION['cart']));?></h1>
+<div>
 
+<div>
 <form method="post">
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
   <p>Remote Control R2-D2<br>$29.99</p>
@@ -81,6 +85,7 @@ print_r($_SESSION);
   </form>
 <br>
 <br>
+</div>
 
 <script src="cart.js"></script>
 </body>
