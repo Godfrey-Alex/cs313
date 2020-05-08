@@ -29,7 +29,7 @@ for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
     echo " " . $_SESSION["cart"][$i] . " $" . $_SESSION["prices"][$i] . "";    
     echo "<br>";
 }
-    echo "Total" . $_SESSION["total"]. "";
+    echo "<br>Total $" . $_SESSION["total"]. "";
 
 ?>
     
