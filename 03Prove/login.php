@@ -13,7 +13,7 @@ session_start();
 <?php
 $_SESSION["favcolor"] = "Red";
 $_SESSION["favanimal"] = "Honey Badger";
-$_SESSION["cart"] = array("vader", "lightsaber", "ATST");
+$_SESSION["cart"] = array();
 echo "Session variables are set.";
 echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
@@ -44,13 +44,13 @@ else if(array_key_exists('artoo', $_POST)) {
   addR2cart(); 
 }
 else if(array_key_exists('atst', $_POST)) { 
-  phpAlert("AT-ST added to cart"); 
+  addATSTcart(); 
 }
 else if(array_key_exists('vader', $_POST)) { 
-  phpAlert("Vader added to cart"); 
+  addVadercart(); 
 }
 else if(array_key_exists('saber', $_POST)) { 
-  phpAlert("Sabers added to cart"); 
+  addLightSabercart(); 
 } 
 print_r($_SESSION);
 
