@@ -18,6 +18,15 @@ print_r($_SESSION);
 <button type="submit" formaction="/03Prove/checkout.php">Checkout</button>
 </form>
 
+<div>
+
+<?php
+for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
+    echo $_SESSION["cart"][$i];
+}
+?>
+</div>
+
 <script src="cart.js"></script>
 </body>
 </html>
