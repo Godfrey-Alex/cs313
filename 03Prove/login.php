@@ -23,6 +23,8 @@ session_start();
 function clearCart() {
   unset($_SESSION["cart"]); 
   $_SESSION["cart"] = array();
+  unset($_SESSION["prices"]); 
+  $_SESSION["prices"] = array();
 }
 function addR2cart() {
   //echo '<script type="text/javascript">alert("' . $msg . '")</script>';
