@@ -5,11 +5,11 @@
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<h1>Welcome to your Cart</h1>
+<h1>Thank you for your Purchase</h1>
 
 <form method="post">
-<button type="submit" formaction="/03Prove/login.php">Continue Shopping</button>
-<button type="submit" formaction="/03Prove/checkout.php">Checkout</button>
+<button type="submit" formaction="/03Prove/cart.php">Return to Cart</button>
+<button type="submit" formaction="/03Prove/confirm.php">Buy Now</button>
 </form>
 
 <script src="cart.js"></script>
