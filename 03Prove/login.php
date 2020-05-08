@@ -69,7 +69,7 @@ print_r($_SESSION);
 <form method="post">
   <br>
   <br>
-  <button type="submit" formaction="/cart.php">Go to Cart</button>
+  <button type="submit" formaction="/03Prove/cart.php">Go to Cart</button>
   <br>
   <br>
 <img src="images/Artoo.PNG" alt="Artoo" height=25% width=auto><br>
