@@ -24,7 +24,7 @@ print_r($_SESSION);
 <?php
     
 for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
-    echo $_SESSION["cart"][$i] . " $" . echo $_SESSION["prices"][$i];    
+    echo " " . $_SESSION["cart"][$i] . " " . echo $_SESSION["prices"][$i] . "";    
     echo "<br>";
 }
 ?>
