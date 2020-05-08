@@ -61,7 +61,8 @@ print_r($_SESSION);
 <br>
 <?php //phpAlert("Hello world!\\n\\nPHP has got an Alert Box");  ?>
 <div id='cartDiv'>
-<h3 id='cart'>Items in cart: </h1>
+
+<h3 id='cart'>Items in cart:<?php echo $_SESSION['cart'][0];?> </h1>
 </div>
 
 <div>
