@@ -25,7 +25,7 @@ $_SESSION["total"] = 0;
 <?php
     
 for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
-    $_SESSION["prices"] += $_SESSION["prices"][$i]
+    $_SESSION["total"] += $_SESSION["prices"][$i]
     echo " " . $_SESSION["cart"][$i] . " $" . $_SESSION["prices"][$i] . "";    
     echo "<br>";
 }
