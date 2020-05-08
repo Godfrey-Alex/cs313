@@ -11,13 +11,13 @@ session_start();
 <body>
 
 <?php
-$_SESSION["favcolor"] = "Red";
-$_SESSION["favanimal"] = "Honey Badger";
-$_SESSION["cart"] = array();
-echo "Session variables are set.";
-echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
-echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
-echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . $_SESSION['cart'][0] . " in my cart.";
+//$_SESSION["favcolor"] = "Red";
+//$_SESSION["favanimal"] = "Honey Badger";
+//$_SESSION["cart"] = array();
+//echo "Session variables are set.";
+//echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
+//echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+echo "I have " . $_SESSION['cart'][0] . ", " . $_SESSION['cart'][1] . " and " . $_SESSION['cart'][2] . " in my cart.";
 
 function clearCart() {
   unset($_SESSION["cart"]); // $foo is gone
