@@ -19,26 +19,27 @@ echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 echo "I have " . $_SESSION['cart'][1] . ", " . $_SESSION['cart'][2] . " and " . $_SESSION['cart'][0] . " in my cart.";
 
-function phpAlert($msg) {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+function clearCart() {
+  unset($_SESSION["cart"]); // $foo is gone
+  $_SESSION["cart"] = array();
 }
 function addR2cart() {
   //echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-  array_push($_SESSION['cart'],"Test Item");
+  array_push($_SESSION['cart'],"R2D2");
 
 }
 function addATSTcart() {
-  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+  array_push($_SESSION['cart'],"ATST");
 }
 function addVadercart() {
-  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+  array_push($_SESSION['cart'],"VADER");
 }
 function addLightSabercart() {
-  echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+  array_push($_SESSION['cart'],"LSABER");
 }
 
-if(array_key_exists('Alert', $_POST)) { 
-  phpAlert("test"); 
+if(array_key_exists('clear', $_POST)) { 
+  clearCart(); 
 } 
 else if(array_key_exists('artoo', $_POST)) { 
   addR2cart(); 
@@ -76,6 +77,7 @@ print_r($_SESSION);
   <img src="images/lightSaber.PNG" alt="Light Saber" height=25% width=auto><br>
   <p>LightSaber Collection Set<br>$129.99</p>
   <input type="submit" class="button" name="saber" value="Add to Cart"/><br><br>
+  <input type="submit" class="button" name="clear" value="Clear Cart"/><br><br>
   </form>
 <br>
 <br>
