@@ -5,6 +5,11 @@
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+<?php
+print_r($_SESSION);
+?>
+
 <h1>Thank you for your Purchase</h1>
 
 <form method="post">

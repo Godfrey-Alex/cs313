@@ -5,6 +5,11 @@
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+<?php
+print_r($_SESSION);
+?>
+
 <h1>Checkout</h1>
 
 <form method="post">
