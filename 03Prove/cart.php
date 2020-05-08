@@ -19,12 +19,18 @@ print_r($_SESSION);
 </form>
 
 <div>
+    <ol>
 
 <?php
+    
 for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
     echo $_SESSION["cart"][$i];
+    echo " " . $_SESSION["prices"][$i];
+    <br>
 }
 ?>
+    
+    </ol>
 </div>
 
 <script src="cart.js"></script>

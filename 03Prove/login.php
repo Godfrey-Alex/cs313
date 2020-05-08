@@ -13,29 +13,33 @@ session_start();
 <?php
 //$_SESSION["favcolor"] = "Red";
 //$_SESSION["favanimal"] = "Honey Badger";
-//$_SESSION["cart"] = array();
+$_SESSION["cart"] = array();
+$_SESSION["prices"] = array();
 //echo "Session variables are set.";
 //echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 //echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 echo "I have " . $_SESSION['cart'][0] . ", " . $_SESSION['cart'][1] . " and " . $_SESSION['cart'][2] . " in my cart.";
 
 function clearCart() {
-  unset($_SESSION["cart"]); // $foo is gone
+  unset($_SESSION["cart"]); 
   $_SESSION["cart"] = array();
 }
 function addR2cart() {
   //echo '<script type="text/javascript">alert("' . $msg . '")</script>';
   array_push($_SESSION['cart'],"R2D2");
-
+  array_push($_SESSION['prices'],"29.99");
 }
 function addATSTcart() {
   array_push($_SESSION['cart'],"ATST");
+  array_push($_SESSION['prices'],"45.99");
 }
 function addVadercart() {
   array_push($_SESSION['cart'],"VADER");
+  array_push($_SESSION['prices'],"59.99");
 }
 function addLightSabercart() {
   array_push($_SESSION['cart'],"LSABER");
+  array_push($_SESSION['prices'],"129.99");
 }
 
 if(array_key_exists('clear', $_POST)) { 
