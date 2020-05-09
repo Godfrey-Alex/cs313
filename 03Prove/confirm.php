@@ -14,10 +14,10 @@ $_SESSION["address"]=$_POST["address"];
 $_SESSION["city"]=$_POST["city"];
 $_SESSION["zip"]=$_POST["zip"];
 $_SESSION["state"]=$_POST["state"];
-unset($_SESSION["cart"]); 
-  $_SESSION["cart"] = array();
-  unset($_SESSION["prices"]); 
-  $_SESSION["prices"] = array();
+//unset($_SESSION["cart"]); 
+  //$_SESSION["cart"] = array();
+  //unset($_SESSION["prices"]); 
+  //$_SESSION["prices"] = array();
 print_r($_SESSION);
 ?>
 
