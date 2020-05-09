@@ -30,7 +30,7 @@ for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
     echo " " . $_SESSION["cart"][$i] . " $" . $_SESSION["prices"][$i] . "";    
     echo "<br>";
 }
-    echo "<br>Total $" . $_SESSION["total"]. "";
+    echo "<br>Total $" . $_SESSION["total"]. "<br><br>";
 
 echo "Your order will shipped in 3-5 business days to the following
     information...<br>"
