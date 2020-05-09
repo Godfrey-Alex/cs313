@@ -14,13 +14,18 @@ print_r($_SESSION);
 <h1>Checkout</h1>
 
 <form method="post">
-<button type="submit" formaction="/03Prove/cart.php">Return to Cart</button><br>
+<button type="submit" formaction="/03Prove/cart.php">Return to Cart</button><br><br>
 <!--<button type="submit" formaction="/03Prove/confirm.php">Buy Now</button>-->
 </form>
 
 <form action="confirm.php" method="post">
 Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br><br>
+E-mail: <input type="text" name="email"><br>
+Street Address: <input type="text" name="address"><br>
+City: <input type="text" name="city"><br>
+Zip: <input type="text" name="zip"><br>
+State: <input type="text" name="state"><br>
+
 <input type="submit">
 </form>
 
