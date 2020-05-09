@@ -11,6 +11,7 @@ session_start();
 print_r($_SESSION);
 echo $_POST["name"];
 $_SESSION["name"]=$_POST["name"];
+echo $_SESSION["name"];
 //$_SESSION["email"]=$_POST["email"];
 //$_SESSION["address"]=$_POST["address"];
 //$_SESSION["city"]=$_POST["city"];
