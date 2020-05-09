@@ -18,7 +18,7 @@ print_r($_SESSION);
 <!--<button type="submit" formaction="/03Prove/confirm.php">Buy Now</button>-->
 </form>
 
-<form action="confirm.php" method="post">
+<form action="/03Prove/confirm.php" method="POST">
 Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
 Street Address: <input type="text" name="address"><br>
