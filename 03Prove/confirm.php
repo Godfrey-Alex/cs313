@@ -9,12 +9,12 @@
 <?php
 session_start();
 print_r($_SESSION);
-$_SESSION["name"]=$_POST["name"]
-$_SESSION["email"]=$_POST["email"]
-$_SESSION["address"]=$_POST["address"]
-$_SESSION["city"]=$_POST["city"]
-$_SESSION["zip"]=$_POST["zip"]
-$_SESSION["state"]=$_POST["state"]
+//$_SESSION["name"]=$_POST["name"]
+//$_SESSION["email"]=$_POST["email"]
+//$_SESSION["address"]=$_POST["address"]
+//$_SESSION["city"]=$_POST["city"]
+//$_SESSION["zip"]=$_POST["zip"]
+//$_SESSION["state"]=$_POST["state"]
 ?>
 
 <h1>Thank you for your Purchase</h1>
