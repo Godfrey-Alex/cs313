@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-print_r($_SESSION);
+//print_r($_SESSION);
 echo $_POST["name"];
 $_SESSION["name"]=$_POST["name"];
 echo $_SESSION["name"];
@@ -17,17 +17,29 @@ $_SESSION["address"]=$_POST["address"];
 $_SESSION["city"]=$_POST["city"];
 $_SESSION["zip"]=$_POST["zip"];
 $_SESSION["state"]=$_POST["state"];
+unset($_SESSION["cart"]); 
+  $_SESSION["cart"] = array();
+  unset($_SESSION["prices"]); 
+  $_SESSION["prices"] = array();
 print_r($_SESSION);
 ?>
 
 <h1>Thank you for your Purchase</h1>
 <h2>
 <?php
+
+for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
+    $_SESSION["total"] = $_SESSION["total"]+$_SESSION["prices"][$i];
+    echo " " . $_SESSION["cart"][$i] . " $" . $_SESSION["prices"][$i] . "";    
+    echo "<br>";
+}
+    echo "<br>Total $" . $_SESSION["total"]. "";
+
 echo "Your order will shipped in 3-5 business days to the following
     information...<br>"
     . $_SESSION["name"] . "<br>"
     . $_SESSION["address"] . "<br>"
-    . $_SESSION["city+"] . "<br>"
+    . $_SESSION["city"] . "<br>"
     . $_SESSION["zip"] . "<br>"
     . $_SESSION["state"] . "<br><br>You should have recieved an invoice at " . $_SESSION["email"] . "";
 
@@ -35,7 +47,7 @@ echo "Your order will shipped in 3-5 business days to the following
 </h2>
 
 <form method="post">
-<button type="submit" formaction="/03Prove/cart.php">Return to Cart</button>
+<button type="submit" formaction="/03Prove/login.php">Return to Browsing</button>
 <button type="submit" formaction="/03Prove/confirm.php">Buy Now</button>
 </form>
 
