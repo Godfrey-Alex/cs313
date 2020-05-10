@@ -13,8 +13,8 @@ session_start();
 <?php
 //$_SESSION["favcolor"] = "Red";
 //$_SESSION["favanimal"] = "Honey Badger";
-//$_SESSION["cart"] = array();
-//$_SESSION["prices"] = array();
+$_SESSION["cart"] = array();
+$_SESSION["prices"] = array();
 //echo "Session variables are set.";
 //echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
 //echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
