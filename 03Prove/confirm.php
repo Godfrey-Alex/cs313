@@ -68,6 +68,8 @@ unset($_SESSION["address"]);
 unset($_SESSION["city"]);
 unset($_SESSION["zip"]);
 unset($_SESSION["state"]);
+unset($_SESSION["total"]);
+unset($_SESSION["email"]);
 
 ?>
 </body>
