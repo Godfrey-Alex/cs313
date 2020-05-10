@@ -18,7 +18,7 @@ $_SESSION["state"]=$_POST["state"];
   //$_SESSION["cart"] = array();
   //unset($_SESSION["prices"]); 
   //$_SESSION["prices"] = array();
-print_r($_SESSION);
+//print_r($_SESSION);
 
 function clearSession(){
     session_destroy();

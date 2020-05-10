@@ -60,7 +60,7 @@ else if(array_key_exists('vader', $_POST)) {
 else if(array_key_exists('saber', $_POST)) { 
   addLightSabercart(); 
 } 
-print_r($_SESSION);
+//print_r($_SESSION);
 
 ?>
 
