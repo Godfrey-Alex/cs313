@@ -35,10 +35,10 @@ for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
 echo "Your order will shipped in 3-5 business days to the following
     information...<br>"
     . htmlspecialchars($_SESSION["name"]) . "<br>"
-    . $_SESSION["address"] . "<br>"
-    . $_SESSION["city"] . "<br>"
-    . $_SESSION["zip"] . "<br>"
-    . $_SESSION["state"] . "<br><br>You should have recieved an invoice at " . $_SESSION["email"] . "";
+    . htmlspecialchars($_SESSION["address"]) . "<br>"
+    . htmlspecialchars($_SESSION["city"]) . "<br>"
+    . htmlspecialchars($_SESSION["zip"]) . "<br>"
+    . htmlspecialchars($_SESSION["state"]) . "<br><br>You should have recieved an invoice at " . $_SESSION["email"] . "";
 
 ?>
 </h2>
