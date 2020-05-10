@@ -53,7 +53,7 @@ echo "Your order will shipped in 3-5 business days to the following
 </h2>
 
 <form method="post">
-<button type="submit" name="clearSession" formaction="/03Prove/login.php">Return to Browsing</button>
+<button type="submit" name="clearSession" value="Return to Browsing" formaction="/03Prove/login.php"></button>
 </form>
 
 <script src="cart.js"></script>
