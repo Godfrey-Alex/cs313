@@ -19,6 +19,15 @@ $_SESSION["state"]=$_POST["state"];
   //unset($_SESSION["prices"]); 
   //$_SESSION["prices"] = array();
 print_r($_SESSION);
+
+function clearSession(){
+    session_destroy();
+}
+
+if(array_key_exists('clearSession', $_POST)) { 
+    clearSession(); 
+}
+
 ?>
 
 <h1>Thank you for your Purchase</h1>
@@ -44,7 +53,7 @@ echo "Your order will shipped in 3-5 business days to the following
 </h2>
 
 <form method="post">
-<button type="submit" formaction="/03Prove/login.php">Return to Browsing</button>
+<button type="submit" name="clearSession" formaction="/03Prove/login.php">Return to Browsing</button>
 </form>
 
 <script src="cart.js"></script>
