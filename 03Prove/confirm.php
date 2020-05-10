@@ -59,7 +59,16 @@ echo "Your order will shipped in 3-5 business days to the following
 <script src="cart.js"></script>
 
 <?php
-session_unset();
+unset($_SESSION["cart"]); 
+$_SESSION["cart"] = array();
+unset($_SESSION["prices"]); 
+$_SESSION["prices"] = array();
+unset($_SESSION["name"]);
+unset($_SESSION["address"]);
+unset($_SESSION["city"]);
+unset($_SESSION["zip"]);
+unset($_SESSION["state"]);
+
 ?>
 </body>
 </html>
