@@ -26,7 +26,7 @@ City: <input type="text" name="city"><br>
 Zip: <input type="text" name="zip"><br>
 State: <input type="text" name="state"><br>
 
-<input type="submit">
+<input type="submit" value="Buy Now">
 </form>
 
 <script src="cart.js"></script>

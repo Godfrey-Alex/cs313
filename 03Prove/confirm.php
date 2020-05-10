@@ -45,8 +45,8 @@ echo "Your order will shipped in 3-5 business days to the following
     information...<br>"
     . htmlspecialchars($_SESSION["name"]) . "<br>"
     . htmlspecialchars($_SESSION["address"]) . "<br>"
-    . htmlspecialchars($_SESSION["city"]) . "<br>"
-    . htmlspecialchars($_SESSION["zip"]) . "<br>"
+    . htmlspecialchars($_SESSION["city"]) . ", "
+    . htmlspecialchars($_SESSION["zip"]) . ", "
     . htmlspecialchars($_SESSION["state"]) . "<br><br>You should have recieved an invoice at " . $_SESSION["email"] . "";
 
 ?>
