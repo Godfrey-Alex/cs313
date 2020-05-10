@@ -59,7 +59,7 @@ echo "Your order will shipped in 3-5 business days to the following
 <script src="cart.js"></script>
 
 <?php
-session_destroy();
+session_unset();
 ?>
 </body>
 </html>
