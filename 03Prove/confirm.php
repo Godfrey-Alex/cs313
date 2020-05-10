@@ -34,7 +34,7 @@ for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
 
 echo "Your order will shipped in 3-5 business days to the following
     information...<br>"
-    . $_SESSION["name"] . "<br>"
+    . htmlspecialchars($_SESSION["name"]) . "<br>"
     . $_SESSION["address"] . "<br>"
     . $_SESSION["city"] . "<br>"
     . $_SESSION["zip"] . "<br>"

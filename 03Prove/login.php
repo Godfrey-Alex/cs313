@@ -21,10 +21,8 @@ session_start();
 //echo "I have " . $_SESSION['cart'][0] . ", " . $_SESSION['cart'][1] . " and " . $_SESSION['cart'][2] . " in my cart.";
 
 function clearCart() {
-  unset($_SESSION["cart"]); 
-  $_SESSION["cart"] = array();
-  unset($_SESSION["prices"]); 
-  $_SESSION["prices"] = array();
+  
+  
 }
 function addR2cart() {
   //echo '<script type="text/javascript">alert("' . $msg . '")</script>';
