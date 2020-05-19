@@ -35,6 +35,17 @@ catch (PDOException $ex)
 
 <h1>Behold my Scriptures:</h1>
 
+<?php
+
+foreach ($db->query('SELECT * FROM public.scriptures') as $row)
+{
+  echo 'user: ' . $row['chapter '];
+  echo ' password: ' . $row['verse'];
+  echo '<br/>';
+}
+
+
+?>
 
 
 
