@@ -39,9 +39,11 @@ catch (PDOException $ex)
 
 foreach ($db->query('SELECT * FROM public.scriptures') as $row)
 {
-  echo 'user: ' . $row['book'];
-  echo ' password: ' . $row['chapter'];
-  echo ' password: ' . $row['verse'];
+  echo '' . $row['book'];
+  echo ' ' . $row['chapter'];
+  echo ':' . $row['verse'];
+  echo ' - "' . $row['content'];
+  echo '"';
   echo '<br/>';
 }
 
