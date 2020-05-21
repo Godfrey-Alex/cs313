@@ -54,9 +54,9 @@ catch (PDOException $ex)
 <h1>Behold your friends:</h1>
 
 <?php
-$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password') as $row;
+$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password');
 
-if (mysqli_num_rows($row) != 0)
+if (mysqli_num_rows($db) != 0)
 {
 echo 'results found';
 } else {
