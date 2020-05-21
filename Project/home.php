@@ -55,13 +55,13 @@ catch (PDOException $ex)
 
 <?php
 $db->query('SELECT id FROM public.user WHERE username = $username AND password = $password');
+foreach ($db->query('SELECT id FROM public.user WHERE username = $username AND password = $password') as $row){
+    echo '' . $row['id'];
 
-if (mysqli_num_rows($db) != 0)
-{
-echo 'results found';
-} else {
-echo 'login failed';
 }
+
+//if (mysqli_num_rows($db) != 0)
+
 
 ?>
 
