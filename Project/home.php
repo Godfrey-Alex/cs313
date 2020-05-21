@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-include '/Project/dbconnection.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-/*try
+try
 {
   $dbUrl = getenv('DATABASE_URL');
 
@@ -47,7 +47,7 @@ catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}*/
+}
 
 ?>
 

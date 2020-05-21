@@ -8,9 +8,9 @@
 
 <?php
 session_start();
-include '/Project/dbconnection.php';
+
 //print_r($_SESSION);
-/*
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -32,7 +32,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-*/
+
 ?>
 
 <h1>Please Log In</h1>
