@@ -33,7 +33,7 @@ catch (PDOException $ex)
 
 ?>
 
-<h1>Behold your friends:</h1>
+<h1>Please Log In</h1>
 
 <?php
 foreach ($db->query('SELECT * FROM public.scriptures') as $row)
@@ -47,7 +47,7 @@ foreach ($db->query('SELECT * FROM public.scriptures') as $row)
 }
 ?>
 
-<form action="home.php" method="post">
+<form action="/Project/home.php" method="post">
 username: <input type="text" name="username"><br>
 password: <input type="password" name="password"><br>
 <input type="submit">
