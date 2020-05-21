@@ -8,6 +8,7 @@
 
 <?php
 session_start();
+$_SESSION["authenticated"] = false;
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo $username;
     }
-
     if (empty($password)) {
         echo "No password was entered";
     } else {
@@ -53,7 +53,17 @@ catch (PDOException $ex)
 
 <h1>Behold your friends:</h1>
 
+<?php
+$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password') as $row;
 
+if (mysqli_num_rows($row) != 0)
+{
+echo 'results found';
+} else {
+echo 'login failed';
+}
+
+?>
 
 
 
