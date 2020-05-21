@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-<?php include '/Project/dbconnection.php';?>
+include '/Project/dbconnection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field

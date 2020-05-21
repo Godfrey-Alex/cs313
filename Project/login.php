@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-<?php include '/Project/dbconnection.php';?>
+include '/Project/dbconnection.php';
 //print_r($_SESSION);
 /*
 try
