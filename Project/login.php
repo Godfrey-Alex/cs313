@@ -48,8 +48,8 @@ foreach ($db->query('SELECT * FROM public.scriptures') as $row)
 ?>
 
 <form action="home.php" method="post">
-username: <input type="text" name="name"><br>
-password: <input type="text" name="email"><br>
+username: <input type="text" name="username"><br>
+password: <input type="password" name="password"><br>
 <input type="submit">
 </form>
 
