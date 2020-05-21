@@ -8,19 +8,26 @@
 
 <?php
 session_start();
+<?php include '/Project/dbconnection.php';?>
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
-    $name = $_POST['username'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     if (empty($name)) {
-        echo "Name is empty";
+        echo "No username was entered";
     } else {
-        echo $name;
+        echo $username;
+    }
+
+    if (empty($password)) {
+        echo "No password was entered";
+    } else {
+        echo $username;
     }
 }
 
-
-try
+/*try
 {
   $dbUrl = getenv('DATABASE_URL');
 
@@ -40,7 +47,7 @@ catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}
+}*/
 
 ?>
 
