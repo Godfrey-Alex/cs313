@@ -55,9 +55,14 @@ catch (PDOException $ex)
 
 <?php
 //$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password');
-foreach ($db->query('SELECT id FROM public.user WHERE username = $username AND password = $password') as $row){
-    echo '' . $row['id'];
-
+foreach ($db->query('SELECT * FROM public.scriptures') as $row)
+{
+  echo '' . $row['book'];
+  echo ' ' . $row['chapter'];
+  echo ':' . $row['verse'];
+  echo ' - "' . $row['content'];
+  echo '"';
+  echo '<br/>';
 }
 
 //if (mysqli_num_rows($db) != 0)
