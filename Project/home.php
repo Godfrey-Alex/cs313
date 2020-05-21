@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if (empty($name)) {
+    if (empty($namename)) {
         echo "No username was entered";
     } else {
         echo $username;
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($password)) {
         echo "No password was entered";
     } else {
-        echo $username;
+        echo $password;
     }
 }
 
