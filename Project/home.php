@@ -55,7 +55,7 @@ catch (PDOException $ex)
 
 <?php
 //$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password');
-foreach ($db->query('SELECT id FROM public.user') as $row)
+foreach ($db->query('SELECT id FROM public.user WHERE username = 'alexgodfre'') as $row)
 {
   echo '' . $row['id'];
   //echo ' ' . $row['username'];
