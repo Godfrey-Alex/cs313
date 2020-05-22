@@ -58,7 +58,7 @@ $db->query("SELECT id FROM public.user WHERE username ='".$username."' and passw
 //echo "" . $db;
 if(1==0){
   echo 'Login Failed';
-$db->query('SELECT id FROM public.user WHERE username = $username AND password = $password');
+$db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'");
 }else{
 foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row);
   echo '' . $row['id'];
