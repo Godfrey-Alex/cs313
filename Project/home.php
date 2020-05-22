@@ -62,6 +62,7 @@ catch (PDOException $ex)
 //}else{
 foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row);
   echo '' . $row['id'];
+  echo '' . $db;
   //echo ' ' . $row['username'];
   //echo ':' . $row['password'];
   echo '"';
