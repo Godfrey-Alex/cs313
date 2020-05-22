@@ -54,13 +54,8 @@ catch (PDOException $ex)
 <h1>Behold your friends:</h1>
 
 <?php
-$db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'");
-//echo "" . $db;
-if(1==0){
-  echo 'Login Failed';
-$db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'");
-}else{
-foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row);
+
+foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
   echo '' . $row['id'];
   echo '' . $db;
   //echo ' ' . $row['username'];
@@ -68,7 +63,7 @@ foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' 
   echo '"';
   echo '<br/>';
 }
-}
+
 
 //if (mysqli_num_rows($db) != 0)
 
