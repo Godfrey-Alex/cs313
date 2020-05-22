@@ -54,7 +54,7 @@ catch (PDOException $ex)
 <h1>Behold your friends:</h1>
 
 <?php
-$db1->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'");
+
 foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
   echo '' . $row['id'];
   echo '' . $db;
