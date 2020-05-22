@@ -9,6 +9,7 @@
 <?php
 session_start();
 $_SESSION["authenticated"] = false;
+$_SESSION["currentUserId"] = '';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -55,9 +56,10 @@ catch (PDOException $ex)
 
 <?php
 
-foreach ($db->query("SELECT id FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
-  echo '' . $row['id'];
-  echo '' . $db;
+foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
+  echo 'Welcome ' . $row['display_name'];
+  $_SESSION["authenticated"] = $row['id'];
+  echo '' . $_SESSION["authenticated"];
   //echo ' ' . $row['username'];
   //echo ':' . $row['password'];
   echo '"';
