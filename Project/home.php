@@ -71,10 +71,8 @@ $friendIdList .= '0';
 
 echo ''.$friendIdList;
 
-foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (1)") as $row){
-  echo 'Welcome ' . $row['display_name'];
-  $_SESSION["currentUserId"] = $row['id'];
-  echo '' . $_SESSION["currentUserId"];  
+foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN ('".$friendIdList."')") as $row){
+  echo '' . $row['display_name'];
   echo '<br/>';
 }
 
