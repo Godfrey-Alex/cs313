@@ -79,7 +79,7 @@ $friendIdList .= '0';
 
 
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
-  print '<p>'.'<a href="https://www.w3schools.com/html/">'.$row['display_name'].'</a>'.'</p>'.'<br/>';
+  print '<p>'.'<a href="https://www.w3schools.com/html/">'.$row['display_name'].'</a>'.'</p>';
   //echo '' . $row['display_name'];
   //echo '<br/>';
 }
