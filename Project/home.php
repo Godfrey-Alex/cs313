@@ -65,13 +65,6 @@ foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' a
 <h3>Behold your friends:</h3>
 
 <?php
-foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
-  echo 'Welcome ' . $row['display_name'];
-  $_SESSION["currentUserId"] = $row['id'];
-  echo '' . $_SESSION["currentUserId"];  
-  echo '<br/>';
-}
-
 $friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION["currentUserId"]."'");
 $friendIdList;
 while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
