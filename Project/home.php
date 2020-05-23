@@ -49,15 +49,6 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
-
-foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
-  echo 'Welcome ' . $row['display_name'];
-  $_SESSION["currentUserId"] = $row['id'];
-  //echo '' . $_SESSION["currentUserId"];  
-  echo '<br/>';
-}
-
 ?>
 
 <h1>
@@ -88,9 +79,9 @@ while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
 }
 $friendIdList .= '0';
 
-echo ''.$friendIdList;
+//echo ''.$friendIdList;
 
-echo "SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")";
+
 
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
   echo '' . $row['display_name'];
@@ -98,11 +89,6 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$frie
 }
 
 ?>
-
-
-
-
-
 
 <script src="cart.js"></script>
 </body>
