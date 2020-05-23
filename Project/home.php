@@ -75,10 +75,13 @@ $friendIdList .= '0';
 //echo ''.$friendIdList;
 
 
+$friendRows = $db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")");
+
 
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
-  echo '' . $row['display_name'];
-  echo '<br/>';
+  print '<p>'.'<a href="https://www.w3schools.com/html/">'.$row['display_name'].'</a>'.'</p>'.'<br/>';
+  //echo '' . $row['display_name'];
+  //echo '<br/>';
 }
 
 ?>
