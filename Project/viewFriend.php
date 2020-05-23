@@ -36,7 +36,7 @@ catch (PDOException $ex)
 ?>
 
 <h1>Hello Friend</h1>
-<h2>
+
 <?php
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id = '".$_SESSION["viewFriendId"]."'") as $row){
   //print '<p>'.'<a href="/Project/viewFriend.php">'.$row['display_name'].'</a>'.'</p>';
@@ -44,7 +44,7 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id = '".$_SESS
   echo '<br/>';
 }
 ?>
-</h2>
+
 <h3>Memories</h3>
 
 
