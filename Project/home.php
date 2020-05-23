@@ -50,16 +50,28 @@ catch (PDOException $ex)
   die();
 }
 
+
 foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
   echo 'Welcome ' . $row['display_name'];
   $_SESSION["currentUserId"] = $row['id'];
-  echo '' . $_SESSION["currentUserId"];  
+  //echo '' . $_SESSION["currentUserId"];  
   echo '<br/>';
 }
 
 ?>
 
-<h1>Behold your friends:</h1>
+<h1>
+<?php
+foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
+  echo 'Welcome ' . $row['display_name'];
+  $_SESSION["currentUserId"] = $row['id'];
+  //echo '' . $_SESSION["currentUserId"];  
+  echo '<br/>';
+}
+?>
+</h1>
+
+<h3>Behold your friends:</h3>
 
 <?php
 foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
