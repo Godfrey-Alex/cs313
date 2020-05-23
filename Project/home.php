@@ -73,7 +73,7 @@ echo ''.$friendIdList;
 
 echo "SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")";
 
-foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN ('".$friendIdList."')") as $row){
+foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
   echo '' . $row['display_name'];
   echo '<br/>';
 }
