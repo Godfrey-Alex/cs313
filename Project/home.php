@@ -63,13 +63,20 @@ foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' a
 }
 
 $friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION["currentUserId"]."'");
-$friendList;
+$friendIdList;
 while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
-  $friendList .= $row['friend_id'] .=', ';
+  $friendIdList .= $row['friend_id'] .=', ';
 }
-$friendList .= '0';
+$friendIdList .= '0';
 
-echo ''.$friendList;
+echo ''.$friendIdList;
+
+foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (1)") as $row){
+  echo 'Welcome ' . $row['display_name'];
+  $_SESSION["currentUserId"] = $row['id'];
+  echo '' . $_SESSION["currentUserId"];  
+  echo '<br/>';
+}
 
 ?>
 
