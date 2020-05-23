@@ -65,7 +65,7 @@ foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' a
 $friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION["currentUserId"]."'");
 $friendList;
 while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
-  $friendList .= $row['friend_id'] .=',';
+  $friendList .= $row['friend_id'] .=', ';
 }
 $friendList .= '0';
 
