@@ -75,7 +75,7 @@ $friendIdList .= '0';
 //echo ''.$friendIdList;
 
 
-$friendRows = $db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")");
+//$friendRows = $db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")");
 
 
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
