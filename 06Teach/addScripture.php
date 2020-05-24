@@ -41,7 +41,7 @@ catch (PDOException $ex)
 Book: <input type="text" name="name"><br>
 Chapter: <input type="number" name="email"><br>
 Verse: <input type="number" name="name"><br>
-<textarea name="content" rows="10" cols="30">Content</textarea><br>
+Content<br><textarea name="content" rows="10" cols="30"></textarea><br>
 <input type="submit">
 </form>
 
