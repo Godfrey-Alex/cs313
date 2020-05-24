@@ -39,8 +39,10 @@ catch (PDOException $ex)
 <body>
 
 <form action="/06Teach/scripture.php" method="post">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
+Book: <input type="text" name="name"><br>
+Chapter: <input type="text" name="email"><br>
+Verse: <input type="text" name="name"><br>
+Content: <input type="textArea" name="email"><br>
 <input type="submit">
 </form>
 
