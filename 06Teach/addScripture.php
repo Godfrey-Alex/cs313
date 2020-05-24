@@ -46,7 +46,7 @@ Topic:<br>
 <?php
 foreach ($db->query('SELECT name FROM public.topic') as $row)
 {
-  print '<input type="checkbox" id="'".$row['name']."'" name="'".$row['name']."'" value="'".$row['name']."'">';
+  print '<input type="checkbox" id='".$row['name']."' name='".$row['name']."' value='".$row['name']."'>';
   print '<label for="vehicle1">'".$row['name']."'</label><br>';
 }
 ?>
