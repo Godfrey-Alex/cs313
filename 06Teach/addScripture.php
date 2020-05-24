@@ -42,11 +42,12 @@ Book: <input type="text" name="name"><br>
 Chapter: <input type="number" name="email"><br>
 Verse: <input type="number" name="name"><br>
 Content:<br><textarea name="content" rows="10" cols="30"></textarea><br>
+Topic:<br>
 <?php
 foreach ($db->query('SELECT name FROM public.topic') as $row)
 {
-  print '<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">';
-  print '<label for="vehicle1"> I have a bike</label><br>';
+  print '<input type="checkbox" id="'".$row['name']."'" name="'".$row['name']."'" value="'".$row['name']."'">';
+  print '<label for="vehicle1">'".$row['name']."'</label><br>';
 }
 ?>
 
