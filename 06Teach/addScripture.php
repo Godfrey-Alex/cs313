@@ -9,6 +9,8 @@
 <?php
 session_start();
 //print_r($_SESSION);
+
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
