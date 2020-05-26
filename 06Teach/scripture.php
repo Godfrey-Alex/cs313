@@ -74,12 +74,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $scriptureId=0;
     echo $scriptureId;
     //echo ''.$scriptureId;
-    foreach ($db->query('SELECT MAX(id) FROM public.scriptures') as $row)
+    foreach ($db->query('SELECT id FROM public.scriptures') as $row)
 {
   $scriptureId = $row['id'];
   echo $scriptureId;
 }
-foreach ($db->query('SELECT MAX(id) FROM public.scripture_topic') as $row)
+foreach ($db->query('SELECT id FROM public.scripture_topic') as $row)
 {
   $stid = $row['id'];
   echo $stid;
