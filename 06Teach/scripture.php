@@ -42,13 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $charity = $_POST['Charity'];
   $topic = '';
   if (!empty($faith)) {
-    $topic = $faith;
+    $topic =1;
   } 
   if (!empty($sacrifice)) {
-    $topic = $sacrifice;
+    $topic = 2;
   }
   if (!empty($charity)) {
-    $topic = $charity;
+    $topic = 3;
   }
 
   try
@@ -73,8 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo ''.$scriptureId;
   
     // Now go through each topic id in the list from the user's checkboxes
-    foreach ($topicIds as $topicId)
-    {
+    
       echo "ScriptureId: $scriptureId, topicId: $topicId";
   
       // Again, first prepare the statement
@@ -82,10 +81,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
       // Then, bind the values
       $statement->bindValue(':scriptureId', $scriptureId);
-      $statement->bindValue(':topicId', $topicId);
+      $statement->bindValue(':topicId', $topic);
   
       $statement->execute();
-    }
+    
   }
   catch (Exception $ex)
   {
