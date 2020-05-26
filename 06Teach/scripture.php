@@ -69,8 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->execute();
   
     // get the new id
-    $scriptureId = $db->lastInsertId();
-    echo ''.$scriptureId;
+    //$scriptureId = $db->lastInsertId();
+    $scriptureId=0;
+    //echo ''.$scriptureId;
+    foreach ($db->query('SELECT MAX(id) FROM public.scripture') as $row)
+{
+  $scriptureId = $row['id']+1;
+}
   
     // Now go through each topic id in the list from the user's checkboxes
     
