@@ -84,8 +84,8 @@ foreach ($db->query('SELECT id FROM public.scripture_topic') as $row)
   $stid = $row['id'];
   echo $stid;
 }
-
-
+$scriptureId.=1;
+$stid.=1;
   
     // Now go through each topic id in the list from the user's checkboxes
     
