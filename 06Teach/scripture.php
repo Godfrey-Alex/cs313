@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     // get the new id
     //$scriptureId = $db->lastInsertId();
+    $stid=0;
     $scriptureId=0;
     echo $scriptureId;
     //echo ''.$scriptureId;
@@ -78,17 +79,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $scriptureId = $row['id'];
   echo $scriptureId;
 }
+foreach ($db->query('SELECT MAX(id) FROM public.scripture_topic') as $row)
+{
+  $stid = $row['id'];
+  echo $stid;
+}
+
+
   
     // Now go through each topic id in the list from the user's checkboxes
     
       echo "ScriptureId: $scriptureId, topicId: $topic";
   
       // Again, first prepare the statement
-      $statement = $db->prepare('INSERT INTO scripture_topic(topicId, scriptureId) VALUES(:topicId , :scriptureId)');
+      $statement = $db->prepare('INSERT INTO scripture_topic(id, topicId, scriptureId) VALUES(:id, :topicId, :scriptureId)');
   
       // Then, bind the values
-      $statement->bindValue(':scriptureId', $scriptureId);
+      $statement->bindValue(':id', $stid);
       $statement->bindValue(':topicId', $topic);
+      $statement->bindValue(':scriptureId', $scriptureId);
   
       $statement->execute();
     
