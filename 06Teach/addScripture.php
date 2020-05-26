@@ -9,8 +9,6 @@
 <?php
 session_start();
 //print_r($_SESSION);
-
-
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -32,6 +30,8 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+
+
 
 ?>
 
