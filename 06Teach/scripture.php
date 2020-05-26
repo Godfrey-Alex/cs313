@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //echo ''.$scriptureId;
     foreach ($db->query('SELECT MAX(id) FROM public.scriptures') as $row)
 {
-  $scriptureId = $row['id']+1;
+  $scriptureId = $row['id'];
 }
   
     // Now go through each topic id in the list from the user's checkboxes
