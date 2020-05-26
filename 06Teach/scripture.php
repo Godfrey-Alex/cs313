@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$scriptureId = $db->lastInsertId();
     $scriptureId=0;
     //echo ''.$scriptureId;
-    foreach ($db->query('SELECT MAX(id) FROM public.scripture') as $row)
+    foreach ($db->query('SELECT MAX(id) FROM public.scriptures') as $row)
 {
   $scriptureId = $row['id']+1;
 }
