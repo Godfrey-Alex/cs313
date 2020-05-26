@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "ScriptureId: $scriptureId, topicId: $topic";
   
       // Again, first prepare the statement
-      $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
+      $statement = $db->prepare('INSERT INTO scripture_topic(topicId, scriptureId) VALUES(:topicId , :scriptureId)');
   
       // Then, bind the values
       $statement->bindValue(':scriptureId', $scriptureId);
