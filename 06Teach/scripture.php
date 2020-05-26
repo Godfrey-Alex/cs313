@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     // Now go through each topic id in the list from the user's checkboxes
     
-      echo "ScriptureId: $scriptureId, topicId: $topicId";
+      echo "ScriptureId: $scriptureId, topicId: $topic";
   
       // Again, first prepare the statement
       $statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
