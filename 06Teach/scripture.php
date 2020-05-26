@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->execute();
   
     // get the new id
-    $scriptureId = $db->lastInsertId("scripture_id_seq");
+    $scriptureId = $db->lastInsertId();
     echo ''.$scriptureId;
   
     // Now go through each topic id in the list from the user's checkboxes
