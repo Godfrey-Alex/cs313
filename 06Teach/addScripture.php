@@ -40,9 +40,9 @@ catch (PDOException $ex)
 
 
 <form action="/06Teach/scripture.php" method="post">
-Book: <input type="text" name="name"><br>
-Chapter: <input type="number" name="email"><br>
-Verse: <input type="number" name="name"><br>
+Book: <input type="text" name="book"><br>
+Chapter: <input type="number" name="chapter"><br>
+Verse: <input type="number" name="verse"><br>
 Content:<br><textarea name="content" rows="10" cols="30"></textarea><br>
 Topic:<br>
 <?php
