@@ -33,7 +33,7 @@ catch (PDOException $ex)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
-  $name = $_POST['name'];
+  $name = $_POST['Faith'];
   if (empty($name)) {
     echo "Name is empty";
   } else {
