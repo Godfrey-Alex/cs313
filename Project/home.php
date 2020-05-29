@@ -86,6 +86,8 @@ $friendIdList .= '0';
 foreach ($db->query("SELECT * FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
   print '<p>'.'<a href="/Project/viewFriend.php">'.$row['display_name'].'</a>'.'</p>';
   print '<input type="submit" name="'.$row['id'].'" value="'.$row['display_name'].'"/>';
+  print '<input type="radio" id="male" name="gender" value="male">
+         <label for="male">Male</label><br>'
 }
 
 ?>
