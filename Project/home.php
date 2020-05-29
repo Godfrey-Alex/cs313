@@ -72,7 +72,11 @@ while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
   $friendIdList .= $row['friend_id'] .=', ';
 }
 $friendIdList .= '0';
+?>
 
+
+<form action="/Project/viewFriend.php" method="POST" id="form1">
+<?php
 //echo ''.$friendIdList;
 
 
@@ -85,6 +89,7 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$frie
 }
 
 ?>
+</form>
 
 <script src="cart.js"></script>
 </body>
