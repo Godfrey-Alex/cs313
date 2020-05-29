@@ -8,6 +8,9 @@
 
 <?php
 session_start();
+$friendId = $_POST['name'];
+echo $friendId;
+
 
 //print_r($_SESSION);
 
