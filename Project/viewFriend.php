@@ -10,9 +10,9 @@
 session_start();
 $friendId = $_POST['radioFriendId'];
 $_SESSION["viewFriendId"]=$_POST['radioFriendId'];
-echo 'friend id: '.$friendId;
+//echo 'friend id: '.$friendId;
 $friendButton = $_POST[''];
-echo 'current user id: ' .$_SESSION["currentUserId"];
+//echo 'current user id: ' .$_SESSION["currentUserId"];
 
 //print_r($_SESSION);
 
@@ -59,10 +59,10 @@ while ($row = $memoryIds->fetch(PDO::FETCH_ASSOC)){
   $memoryIdList .= $row['memory_id'] .=', ';
 }
 $memoryIdList .= '0';
-echo $memoryIdList;
+//echo $memoryIdList;
 
 foreach ($db->query("SELECT * FROM public.memory WHERE id IN (".$memoryIdList.")") as $row){
-  print ''.$row['memory_date'].' , '.$row['memory_name'].'<br>'.$row['memory_text'].'<br><br>';
+  print ''.$row['memory_name'].'<br>'.$row['memory_date'].'<br>'.$row['memory_text'].'<br><br>';
 }
 
 ?>
