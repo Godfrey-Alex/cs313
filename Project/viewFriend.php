@@ -9,7 +9,7 @@
 <?php
 session_start();
 $friendId = $_POST['name'];
-echo $friendId;
+echo 'friend id: '.$friendId;
 
 
 //print_r($_SESSION);
