@@ -91,7 +91,7 @@ foreach ($db->query("SELECT * FROM public.friend WHERE id IN (".$friendIdList.")
 }
 
 ?>
-<input type="submit" value="Submit">
+<input type="submit" value="View Friend">
 </form>
 
 <script src="cart.js"></script>
