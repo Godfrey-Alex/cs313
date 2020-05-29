@@ -8,7 +8,7 @@
 
 <?php
 session_start();
-$friendId = $_POST['name'];
+$friendId = $_POST['radioFriendId'];
 echo 'friend id: '.$friendId;
 $friendButton = $_POST[''];
 
