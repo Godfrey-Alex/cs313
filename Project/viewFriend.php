@@ -67,11 +67,6 @@ foreach ($db->query("SELECT * FROM public.memory WHERE id IN (".$memoryIdList.")
 
 ?>
 
-
-
-
-
-
 <script src="cart.js"></script>
 </body>
 </html> 
