@@ -54,8 +54,14 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id = '".$_SESS
 
 <?php
 $memoryIds = $db->query("SELECT memory_id from public.memory_list where user_id = '".$_SESSION["currentUserId"]."' and friend_id = '".$_SESSION["viewFriendId"]."'");
+$memoryIdList='';
 while ($row = $memoryIds->fetch(PDO::FETCH_ASSOC)){
-  print 'FriendID: ' .$row['memory_id'];
+  $memoryIdList .= $row['friend_id'] .=', ';
+}
+$memoryIdList .= '0';
+
+foreach ($db->query("SELECT * FROM public.memory WHERE id IN (".$memoryIdList.")") as $row){
+  print ''.$row['memory_date'].' , '.$row['memory_name'].'<br>'.$row['memory_text'].'<br><br>';
 }
 
 ?>
