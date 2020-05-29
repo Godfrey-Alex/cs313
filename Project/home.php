@@ -81,7 +81,7 @@ $friendIdList .= '0';
 
 foreach ($db->query("SELECT display_name FROM public.friend WHERE id IN (".$friendIdList.")") as $row){
   print '<p>'.'<a href="/Project/viewFriend.php">'.$row['display_name'].'</a>'.'</p>';
-  print '<input type="submit" name="'.$row['display_name'].'" value="Submit"/>';
+  print '<input type="submit" name="'.$row['display_name'].'" value="'.$row['display_name'].'"/>';
 }
 
 ?>
