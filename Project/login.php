@@ -38,7 +38,7 @@ catch (PDOException $ex)
 <h1>Please Log In</h1>
 
 <?php
-foreach ($db->query('SELECT * FROM public.scriptures') as $row)
+/*foreach ($db->query('SELECT * FROM public.scriptures') as $row)
 {
   echo '' . $row['book'];
   echo ' ' . $row['chapter'];
@@ -47,6 +47,7 @@ foreach ($db->query('SELECT * FROM public.scriptures') as $row)
   echo '"';
   echo '<br/>';
 }
+*/
 ?>
 
 <form action="/Project/home.php" method="post">
