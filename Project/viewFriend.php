@@ -52,6 +52,12 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id = '".$_SESS
 </h2>
 <h3>Memories</h3>
 
+<?php
+$memoryIds = $db->query("SELECT memory_id from public.memory_list where user_id = '".$_SESSION["currentUserId"]."' and friend_id = '".$_SESSION["viewFriendId"]."'");
+echo $memoryIds;
+
+?>
+
 
 
 
