@@ -10,7 +10,7 @@
 session_start();
 $friendId = $_POST['name'];
 echo 'friend id: '.$friendId;
-$friendButton = $_POST['']
+$friendButton = $_POST[''];
 
 
 //print_r($_SESSION);
