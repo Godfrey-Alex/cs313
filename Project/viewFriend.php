@@ -59,6 +59,7 @@ while ($row = $memoryIds->fetch(PDO::FETCH_ASSOC)){
   $memoryIdList .= $row['friend_id'] .=', ';
 }
 $memoryIdList .= '0';
+echo $memoryIdList;
 
 foreach ($db->query("SELECT * FROM public.memory WHERE id IN (".$memoryIdList.")") as $row){
   print ''.$row['memory_date'].' , '.$row['memory_name'].'<br>'.$row['memory_text'].'<br><br>';
