@@ -12,7 +12,7 @@ $friendId = $_POST['radioFriendId'];
 $_SESSION["viewFriendId"]=$_POST['radioFriendId'];
 echo 'friend id: '.$friendId;
 $friendButton = $_POST[''];
-
+echo 'current user id: ' .$_SESSION["currentUserId"];
 
 //print_r($_SESSION);
 
