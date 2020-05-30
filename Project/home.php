@@ -33,14 +33,14 @@ if(isset($_POST["loginPost"])){
   $username = $_POST['username'];
   $password = $_POST['password'];
   if (empty($username)) {
-      //echo "No username was entered";
+      echo "No username was entered";
   } else {
-      //echo $username;
+      echo $username;
   }
   if (empty($password)) {
-      //echo "No password was entered";
+      echo "No password was entered";
   } else {
-      //echo $password;
+      echo $password;
   }
 }
 
