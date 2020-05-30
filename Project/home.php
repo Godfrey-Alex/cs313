@@ -95,7 +95,6 @@ while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
 $friendIdList .= '0';
 
 $lastid = $db->lastInsertId();
-echo $lastid;
 ?>
 
 
