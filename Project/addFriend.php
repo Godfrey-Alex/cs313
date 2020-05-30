@@ -35,7 +35,7 @@ catch (PDOException $ex)
 
 ?>
 
-<h1>Please Give the name of  your new friend.</h1>
+<h1>Please give the name of your new friend.</h1>
 
 <?php
 /*foreach ($db->query('SELECT * FROM public.scriptures') as $row)
@@ -52,7 +52,7 @@ catch (PDOException $ex)
 
 <form action="/Project/home.php" method="post">
 New Friend Name: <input type="text" name="nfDisplay_name"><br>
-<input type="submit">
+<input type="submit" value="Add Friend" name="addNewFriend">
 </form>
 
 
