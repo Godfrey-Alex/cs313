@@ -111,6 +111,9 @@ foreach ($db->query("SELECT * FROM public.friend WHERE id IN (".$friendIdList.")
          <label for="radioFriendId">'.$row['display_name'].'</label><br>';
 }
 
+$lastid = $db->lastInsertId();
+echo $lastid;
+
 ?>
 <br><input type="submit" value="View Friend">
 </form>
