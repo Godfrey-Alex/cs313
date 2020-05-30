@@ -38,16 +38,16 @@ catch (PDOException $ex)
 <h1>Please give the name of your new friend.</h1>
 
 <?php
-/*foreach ($db->query('SELECT * FROM public.scriptures') as $row)
-{
-  echo '' . $row['book'];
-  echo ' ' . $row['chapter'];
-  echo ':' . $row['verse'];
-  echo ' - "' . $row['content'];
-  echo '"';
-  echo '<br/>';
-}
-*/
+$nfDisplay_name = 'Scott Sprague';
+$query = 'INSERT INTO friend2(display_name) VALUES(:display_name)';
+$statement = $db->prepare($query);
+
+// Now we bind the values to the placeholders. This does some nice things
+// including sanitizing the input with regard to sql commands.
+$statement->bindValue(':display_name', $nfDisplay_name);
+$statement->execute();
+$lastFriendId = $db->lastInsertId("friend2_id_seq");
+echo $lastFriendId;
 ?>
 
 <form action="/Project/home.php" method="post">
