@@ -71,7 +71,7 @@ catch (PDOException $ex)
 }
 
 if(isset($_POST["addNewFriend"])){
-  echo "you just added a friend ".$_POST["addNewFriend"];
+  echo "you just added a friend ".$_POST["nfDisplay_name"];
 }
 
 ?>
