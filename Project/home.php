@@ -79,8 +79,8 @@ if(isset($_POST["addNewFriend"])){
   $lastFriendId = $db->lastInsertId("friend_id_seq");
   echo $lastFriendId;
 
-  $query = 'INSERT INTO public.user_friend_list (user_id, friend_id) VALUES (:user_id, :friend_id)';
-  $statement = $db->prepare($query);
+  $query1 = 'INSERT INTO public.user_friend_list (user_id, friend_id) VALUES (:user_id, :friend_id)';
+  $statement = $db->prepare($query1);
   $statement->bindValue(':user_id', $_SESSION["currentUserId"]);
   $statement->bindValue(':friend_id', $lastFriendId);
   $statement->execute();
