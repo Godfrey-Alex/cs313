@@ -72,6 +72,18 @@ catch (PDOException $ex)
 
 if(isset($_POST["addNewFriend"])){
   echo "you just added a friend ".$_POST["nfDisplay_name"];
+  $query = 'INSERT INTO friend(display_name) VALUES(:display_name)';
+  $statement = $db->prepare($query);
+  $statement->bindValue(':display_name', $_POST["nfDisplay_name"]);
+  $statement->execute();
+  $lastFriendId = $db->lastInsertId("friend_id_seq");
+  echo $lastFriendId;
+
+  $query = 'INSERT INTO public.user_friend_list (user_id, friend_id) VALUES (:user_id, :friend_id)';
+  $statement = $db->prepare($query);
+  $statement->bindValue(':user_id', $_SESSION["currentUserId"]);
+  $statement->bindValue(':friend_id', $lastFriendId);
+  $statement->execute();
 }
 
 ?>
