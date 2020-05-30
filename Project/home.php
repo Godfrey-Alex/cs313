@@ -11,7 +11,7 @@ session_start();
 $_SESSION["username"];
 $_SESSION["password"];
 $_SESSION["authenticated"] = false;
-$_SESSION["currentUserId"] = '';
+//$_SESSION["currentUserId"] = '';
 $_SESSION["viewFriendId"]=1;
 
 
