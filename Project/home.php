@@ -44,6 +44,10 @@ if(isset($_POST["loginPost"])){
   }
 }
 
+if(isset($_POST["addNewFriend"])){
+  echo "you just added a friend";
+}
+
 try
 {
   $dbUrl = getenv('DATABASE_URL');
