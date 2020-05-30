@@ -46,9 +46,7 @@ if(isset($_POST["loginPost"])){
   }
 }
 
-if(isset($_POST["addNewFriend"])){
-  echo "you just added a friend";
-}
+
 
 try
 {
@@ -71,6 +69,11 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+
+if(isset($_POST["addNewFriend"])){
+  echo "you just added a friend ".$_POST["addNewFriend"];
+}
+
 ?>
 
 <h1>
