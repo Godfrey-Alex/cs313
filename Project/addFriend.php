@@ -33,7 +33,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
+print_r($_SESSION);
 ?>
 
 <h1>Please give the name of your new friend.</h1>

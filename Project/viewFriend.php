@@ -14,7 +14,7 @@ $_SESSION["viewFriendId"]=$_POST['radioFriendId'];
 $friendButton = $_POST[''];
 //echo 'current user id: ' .$_SESSION["currentUserId"];
 
-//print_r($_SESSION);
+print_r($_SESSION);
 echo $_SESSION["currentUserId"];
 
 try
