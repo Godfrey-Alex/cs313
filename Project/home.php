@@ -88,7 +88,7 @@ if(isset($_POST["addNewFriend"])){
   $statement->bindValue(':user_id', $_SESSION["currentUserId"]);
   $statement->bindValue(':friend_id', $lastFriendId);
   $statement->execute();
-  
+  unset($_POST["addNewFriend"]);
 }
 print_r($_SESSION);
 ?>
