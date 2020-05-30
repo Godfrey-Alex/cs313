@@ -8,6 +8,8 @@
 
 <?php
 session_start();
+$_SESSION["username"];
+$_SESSION["password"];
 $_SESSION["authenticated"] = false;
 $_SESSION["currentUserId"] = '';
 $_SESSION["viewFriendId"]=1;
@@ -30,8 +32,8 @@ $_SESSION["viewFriendId"]=1;
 }
 */
 if(isset($_POST["loginPost"])){
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $_SESSION["username"] = $_POST['username'];
+  $_SESSION["password"] = $_POST['password'];
   if (empty($username)) {
       //echo "No username was entered";
   } else {
@@ -73,7 +75,7 @@ catch (PDOException $ex)
 
 <h1>
 <?php
-foreach ($db->query("SELECT * FROM public.user WHERE username ='".$username."' and password = '".$password."'") as $row){
+foreach ($db->query("SELECT * FROM public.user WHERE username ='".$_SESSION["username"]."' and password = '".$_SESSION["password"]."'") as $row){
   echo 'Welcome ' . $row['display_name'];
   $_SESSION["currentUserId"] = $row['id'];
   //echo '' . $_SESSION["currentUserId"];  
