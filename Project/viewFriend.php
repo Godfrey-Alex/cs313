@@ -15,6 +15,7 @@ $friendButton = $_POST[''];
 //echo 'current user id: ' .$_SESSION["currentUserId"];
 
 //print_r($_SESSION);
+echo $_SESSION["currentUserId"];
 
 try
 {

@@ -8,6 +8,7 @@
 
 <?php
 session_start();
+echo $_SESSION["currentUserId"];
 
 //print_r($_SESSION);
 

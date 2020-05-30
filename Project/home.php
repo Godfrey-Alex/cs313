@@ -70,6 +70,8 @@ catch (PDOException $ex)
   die();
 }
 
+echo $_SESSION["currentUserId"];
+
 if(isset($_POST["addNewFriend"])){
   echo "you just added a friend ".$_POST["nfDisplay_name"];
   $query = 'INSERT INTO friend(display_name) VALUES(:display_name)';
