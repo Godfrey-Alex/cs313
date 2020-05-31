@@ -53,6 +53,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement->bindValue(':memory_text', $mText);
   $statement->execute();
   $lastMemoryId = $db->lastInsertId("memory_id_seq");
+  
   echo 'last memory id: '.$lastMemoryId;
   $query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES ($_SESSION["currentUserId"]),$_SESSION["viewFriendId"]), $lastMemoryId)';
   echo $query1;
