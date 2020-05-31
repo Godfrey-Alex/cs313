@@ -44,19 +44,14 @@ catch (PDOException $ex)
 <h1>New Memory</h1>
 <h3>Please tell about a memory with your friend</h3>
 
-<form method="post">
-  
-  <button type="submit" formaction="/03Prove/cart.php">Go to Cart</button>
+<form method="post">  
   <label for="mTitle">Memory Title:</label><br>
   <input type="text" id="fname" name="fname"><br>
-  <label for="mDate">Memory Date::</label>
+  <label for="mDate">Memory Date:</label><br>
   <input type="date" id="mDate" name="mDate">
   <textarea id="mText" name="mText" rows="4" cols="50">
    Tell about your memory...
-  </textarea>
-
-  
-  
+  </textarea><br><br>
   <input type="submit" class="button" name="addMemory" value="Add Memory" /><br><br>
   </form>
 
