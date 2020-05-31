@@ -60,6 +60,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement->bindValue(':user_id', $_SESSION["currentUserId"]);
   $statement->bindValue(':friend_id', $_SESSION["viewFriendId"]);
   $statement->bindValue(':memory_id', $lastMemoryId);
+  echo $query1;
   $statement->execute();
 
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
