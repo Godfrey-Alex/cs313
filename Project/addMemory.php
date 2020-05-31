@@ -40,14 +40,17 @@ catch (PDOException $ex)
 }
 
 if(array_key_exists('addMemory', $_POST)) { 
-  echo $_POST["mTitle"];
-  echo $_POST["mDate"];
-  echo $_POST["mText"];
+  echo $_POST['mTitle'];
+  echo $_POST['mDate'];
+  echo $_POST['mText'];
+  $mTitle = $_POST['mTitle'];
+  $mDate = $_POST['mDate'];
+  $mText = $_POST['mText'];
   $query = 'INSERT INTO public.memory(memory_name, memory_date, memory_text) VALUES(:memory_name, :memory_date, :memory_text)';
   $statement = $db->prepare($query);
-  $statement->bindValue(':memory_name', $_POST['mTitle'];
-  $statement->bindValue(':memory_date', $_POST['mDate'];
-  $statement->bindValue(':memory_text', $_POST['mText'];
+  $statement->bindValue(':memory_name', $mTitle;
+  $statement->bindValue(':memory_date', $mDate;
+  $statement->bindValue(':memory_text', $mText;
   $statement->execute();
   $lastMemoryId = $db->lastInsertId("memory_id_seq");
 
