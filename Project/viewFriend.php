@@ -67,9 +67,9 @@ foreach ($db->query("SELECT * FROM public.memory WHERE id IN (".$memoryIdList.")
 }
 
 ?>
-
+<form method="post">
 <button type="submit" formaction="/Project/addMemory.php">Add New Memory</button>
-
+</form>
 <script src="cart.js"></script>
 </body>
 </html> 
