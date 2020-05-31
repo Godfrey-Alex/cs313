@@ -48,8 +48,8 @@ catch (PDOException $ex)
   <label for="mTitle">Memory Title:</label><br>
   <input type="text" id="fname" name="fname"><br>
   <label for="mDate">Memory Date:</label><br>
-  <input type="date" id="mDate" name="mDate"><br>
-  
+  <input type="date" id="mDate" name="mDate"><br><br>
+
   <textarea id="mText" name="mText" rows="4" cols="50">
    Tell about your memory...
   </textarea><br><br>
