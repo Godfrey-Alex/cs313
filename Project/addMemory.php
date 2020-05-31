@@ -39,7 +39,7 @@ catch (PDOException $ex)
   die();
 }
 
-//if(array_key_exists('addMemory', $_POST)) { 
+if(array_key_exists('addMemory', $_POST)) { 
   //echo $_POST["mTitle"]);
   //$query = 'INSERT INTO friend(display_name) VALUES(:display_name)';
   //$statement = $db->prepare($query);
@@ -47,7 +47,7 @@ catch (PDOException $ex)
   //$statement->execute();
   //$lastFriendId = $db->lastInsertId("friend_id_seq");
   //echo $lastFriendId;
-  //} 
+  } 
 
 ?>
 
