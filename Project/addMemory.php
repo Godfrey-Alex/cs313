@@ -40,8 +40,9 @@ catch (PDOException $ex)
 }
 
 if(array_key_exists('addMemory', $_POST)) { 
-  echo 'it worked';
   echo $_POST["mTitle"];
+  echo $_POST["mDate"];
+  echo $_POST["mText"];
   //$query = 'INSERT INTO friend(display_name) VALUES(:display_name)';
   //$statement = $db->prepare($query);
   //$statement->bindValue(':display_name', $_POST["nfDisplay_name"]);
