@@ -51,13 +51,13 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement->execute();
   $lastMemoryId = $db->lastInsertId("memory_id_seq");
 
-  $query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES (:user_id,:friend_id, :memory_id)';
-  echo $query1;
-  $statement = $db->prepare($query1);
-  $statement->bindValue(':user_id', $_SESSION["currentUserId"];
-  $statement->bindValue(':friend_id', $_POST["mDate"];
-  $statement->bindValue(':memory_id', $lastMemoryId;
-  $statement->execute();
+  //$query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES (:user_id,:friend_id, :memory_id)';
+  //echo $query1;
+  //$statement = $db->prepare($query1);
+  //$statement->bindValue(':user_id', $_SESSION["currentUserId"];
+  //$statement->bindValue(':friend_id', $_SESSION["viewFriendId"];
+  //$statement->bindValue(':memory_id', $lastMemoryId;
+  //$statement->execute();
 
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
