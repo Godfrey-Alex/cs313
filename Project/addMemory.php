@@ -47,7 +47,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement = $db->prepare($query);
   $statement->bindValue(':memory_name', $_POST["mTitle"];
   $statement->bindValue(':memory_date', $_POST["mDate"];
-  $statement->bindValue(':memory_text', $_POST["mText"];
+  //$statement->bindValue(':memory_text', $_POST["mText"];
   //$statement->execute();
  // $lastMemoryId = $db->lastInsertId("memory_id_seq");
 
