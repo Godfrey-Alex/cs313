@@ -49,6 +49,7 @@ if(array_key_exists('addMemory', $_POST)) {
   //$statement->execute();
   //$lastFriendId = $db->lastInsertId("friend_id_seq");
   //echo $lastFriendId;
+  header("Location: Project/home.php");
   } 
 
 ?>
