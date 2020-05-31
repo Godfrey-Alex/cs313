@@ -46,8 +46,8 @@ if(array_key_exists('addMemory', $_POST)) {
   $mTitle = $_POST['mTitle'];
   $mDate = $_POST['mDate'];
   $mText = $_POST['mText'];
-  //$query = 'INSERT INTO public.memory(memory_name, memory_date, memory_text) VALUES(:memory_name, :memory_date, :memory_text)';
-  //$statement = $db->prepare($query);
+  $query = 'INSERT INTO public.memory(memory_name, memory_date, memory_text) VALUES(:memory_name, :memory_date, :memory_text)';
+  $statement = $db->prepare($query);
   //$statement->bindValue(':memory_name', $mTitle;
   //$statement->bindValue(':memory_date', $mDate;
   //$statement->bindValue(':memory_text', $mText;
