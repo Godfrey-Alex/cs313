@@ -49,7 +49,7 @@ if(array_key_exists('addMemory', $_POST)) {
   //$statement->execute();
   //$lastFriendId = $db->lastInsertId("friend_id_seq");
   //echo $lastFriendId;
-  header("Location: /home.php");
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
 
 ?>
