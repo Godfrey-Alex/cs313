@@ -55,7 +55,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $lastMemoryId = $db->lastInsertId("memory_id_seq");
 
   echo 'last memory id: '.$lastMemoryId;
-  $query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES ($_SESSION["currentUserId"]),$_SESSION["viewFriendId"]), $lastMemoryId)';
+  $query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES ($_SESSION["currentUserId"],$_SESSION["viewFriendId"], $lastMemoryId)';
   echo $query1;
   $statement = $db->prepare($query1);
   //$statement->bindValue(':user_id', $_SESSION["currentUserId"]);
