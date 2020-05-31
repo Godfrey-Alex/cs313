@@ -79,18 +79,18 @@ if(isset($_POST["addNewFriend"])){
   $statement->bindValue(':display_name', $_POST["nfDisplay_name"]);
   $statement->execute();
   $lastFriendId = $db->lastInsertId("friend_id_seq");
-  echo $lastFriendId;
-  echo $_SESSION["currentUserId"];
+  //echo $lastFriendId;
+  //echo $_SESSION["currentUserId"];
 
   $query1 = 'INSERT INTO public.user_friend_list (user_id, friend_id) VALUES (:user_id, :friend_id)';
-  echo $query1;
+  //echo $query1;
   $statement = $db->prepare($query1);
   $statement->bindValue(':user_id', $_SESSION["currentUserId"]);
   $statement->bindValue(':friend_id', $lastFriendId);
   $statement->execute();
   unset($_POST["addNewFriend"]);
 }
-print_r($_SESSION);
+//print_r($_SESSION);
 ?>
 
 <h1>
