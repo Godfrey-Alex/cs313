@@ -39,6 +39,16 @@ catch (PDOException $ex)
   die();
 }
 
+if(array_key_exists('addMemory', $_POST)) { 
+  echo $_POST["mTitle"]);
+  //$query = 'INSERT INTO friend(display_name) VALUES(:display_name)';
+  //$statement = $db->prepare($query);
+  //$statement->bindValue(':display_name', $_POST["nfDisplay_name"]);
+  //$statement->execute();
+  //$lastFriendId = $db->lastInsertId("friend_id_seq");
+  //echo $lastFriendId;
+  } 
+
 ?>
 
 <h1>New Memory</h1>
@@ -46,7 +56,7 @@ catch (PDOException $ex)
 
 <form method="post">  
   <label for="mTitle">Memory Title:</label><br>
-  <input type="text" id="fname" name="fname"><br>
+  <input type="text" id="mTitle" name="mTitle"><br>
   <label for="mDate">Memory Date:</label><br>
   <input type="date" id="mDate" name="mDate"><br><br>
 
