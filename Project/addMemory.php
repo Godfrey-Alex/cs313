@@ -45,11 +45,11 @@ if(array_key_exists('addMemory', $_POST)) {
   echo $_POST["mText"];
   $query = 'INSERT INTO public.memory(memory_name, memory_date, memory_text) VALUES(:memory_name, :memory_date, :memory_text)';
   $statement = $db->prepare($query);
-  //$statement->bindValue(':memory_name', $_POST["mTitle"];
-  //$statement->bindValue(':memory_date', $_POST["mDate"];
-  //$statement->bindValue(':memory_text', $_POST["mText"];
-  //$statement->execute();
- // $lastMemoryId = $db->lastInsertId("memory_id_seq");
+  $statement->bindValue(':memory_name', $_POST['mTitle'];
+  $statement->bindValue(':memory_date', $_POST['mDate'];
+  $statement->bindValue(':memory_text', $_POST['mText'];
+  $statement->execute();
+  $lastMemoryId = $db->lastInsertId("memory_id_seq");
 
   //$query1 = 'INSERT INTO public.memory_list (user_id, friend_id, memory_id) VALUES (:user_id,:friend_id, :memory_id)';
   //echo $query1;
