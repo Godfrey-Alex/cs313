@@ -34,7 +34,7 @@ catch (PDOException $ex)
 }
 
   if(isset($_SESSION['currentUserID'])){
-      echo 'hello';
+    //  echo 'hello';
     $userDisplayNameResult = $db->query("SELECT display_name from public.teach_user where id = '".$_SESSION['currentUserID']."'");
     while ($row = $userDisplayNameResult->fetch(PDO::FETCH_ASSOC)){
       //echo $row['id'];
@@ -53,17 +53,6 @@ catch (PDOException $ex)
 echo $userDisplayName;
 ?>
 </h1>
-
-
-
-<form method="post">
-username: <input type="text" name="username"><br>
-password: <input type="password" name="password"><br>
-<input type="submit" class="button" name="loginPost" value="Login"/><br>
-<input type="submit" class="button" name="SignUp" value="Sign Up"/><br>
-</form>
-
-
 
 <script src="cart.js"></script>
 </body>
