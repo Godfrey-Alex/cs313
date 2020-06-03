@@ -49,7 +49,7 @@ if(array_key_exists('loginPost', $_POST)) {
 username: <input type="text" name="username"><br>
 password: <input type="password" name="password"><br>
 <input type="login" value="Login" name="loginPost">
-<button type="SignUp" value="SignUp">Sign Up</button>
+<button type="SignUp" value="SignUp" name="SignUp">Sign Up</button>
 </form>
 
 
