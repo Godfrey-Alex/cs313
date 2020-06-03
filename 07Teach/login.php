@@ -40,9 +40,10 @@ if(array_key_exists('loginPost', $_POST)) {
   $userIdResult = $db->query("SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
   while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
     //echo $row['id'];
-    $_SESSION['currentUserID'] = $row['id'];
-    
+    $_SESSION['currentUserID'] = $row['id'];    
   }
+  header("Location: https://young-hollows-53465.herokuapp.com/07Teach/welcome.php");
+    exit();
 }else if(array_key_exists('SignUp', $_POST)){
   echo 'you hit sign up';
 }
