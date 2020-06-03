@@ -34,10 +34,11 @@ catch (PDOException $ex)
 }
 
 if(array_key_exists('loginPost', $_POST)) { 
-  echo 'you hit login'.$_POST["username"];
+  echo 'you hit login '.$_POST["username"];
   $userIdResult = $db->query("SELECT id from public.teach_user where user_id = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
   while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
-    $_SESSION['currentUserID'] = $row['id'];
+    echo $row['id'];
+    //$_SESSION['currentUserID'] = $row['id'];
   }
 }else if(array_key_exists('SignUp', $_POST)){
   echo 'you hit sign up';
