@@ -41,6 +41,7 @@ catch (PDOException $ex)
     }
   }else{
     header("Location: https://young-hollows-53465.herokuapp.com/07Teach/login.php");
+    exit();
   }
   
 
