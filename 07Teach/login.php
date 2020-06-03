@@ -35,7 +35,9 @@ catch (PDOException $ex)
 
 if(array_key_exists('loginPost', $_POST)) { 
   echo 'you hit login';
-} 
+}else if(array_key_exists('SignUp', $_POST)){
+  echo 'you hit sign up';
+}
 
 ?>
 
@@ -46,7 +48,8 @@ if(array_key_exists('loginPost', $_POST)) {
 <form method="post">
 username: <input type="text" name="username"><br>
 password: <input type="password" name="password"><br>
-<input type="submit" value="Login" name="loginPost">
+<input type="login" value="Login" name="loginPost">
+<button type="SignUp" value="SignUp">Sign Up</button>
 </form>
 
 
