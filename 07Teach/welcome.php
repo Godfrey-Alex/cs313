@@ -36,7 +36,7 @@ catch (PDOException $ex)
   if(isset($_SESSION['currentUserID'])){
       echo 'hello';
     $userDisplayNameResult = $db->query("SELECT display_name from public.teach_user where id = '".$_SESSION['currentUserID']."'");
-    while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $userDisplayNameResult->fetch(PDO::FETCH_ASSOC)){
       //echo $row['id'];
       $userDisplayName = $row['display_name'];    
     }
