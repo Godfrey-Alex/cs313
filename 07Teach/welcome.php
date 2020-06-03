@@ -33,23 +33,24 @@ catch (PDOException $ex)
   die();
 }
 
-if(array_key_exists('loginPost', $_POST)) { 
-  //echo 'you hit login '.$_POST["username"];
-  //$query = "SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'";
-  //echo $query;
-  $userIdResult = $db->query("SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
-  while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
-    //echo $row['id'];
-    $_SESSION['currentUserID'] = $row['id'];
-    
+  if(isset($_SESSION['currentUserID'])){
+    $userDisplayNameResult = $db->query("SELECT display_name from public.teach_user where id = '".$_POST["currentUserID"]."'");
+    while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
+      //echo $row['id'];
+      $userDisplayName = $row['display_name'];    
+    }
+  }else{
+    header("Location: https://young-hollows-53465.herokuapp.com/07Teach/login.php");
   }
-}else if(array_key_exists('SignUp', $_POST)){
-  echo 'you hit sign up';
-}
+  
 
 ?>
 
-<h1>Please Log In</h1>
+<h1>Welcome to your site 
+<?php
+echo $userDisplayName;
+?>
+</h1>
 
 
 
