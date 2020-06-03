@@ -48,8 +48,8 @@ if(array_key_exists('loginPost', $_POST)) {
 <form method="post">
 username: <input type="text" name="username"><br>
 password: <input type="password" name="password"><br>
-<input type="submit" class="button" name="artoo" value="Add to Cart"/><br>
-<input type="submit" class="button" name="artoo" value="Sign Up"/><br>
+<input type="submit" class="button" name="loginPost" value="Add to Cart"/><br>
+<input type="submit" class="button" name="SignUp" value="Sign Up"/><br>
 </form>
 
 
