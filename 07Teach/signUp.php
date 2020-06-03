@@ -33,32 +33,28 @@ catch (PDOException $ex)
   die();
 }
 
-if(array_key_exists('loginPost', $_POST)) { 
-  //echo 'you hit login '.$_POST["username"];
-  //$query = "SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'";
-  //echo $query;
-  $userIdResult = $db->query("SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
-  while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
-    //echo $row['id'];
-    $_SESSION['currentUserID'] = $row['id'];    
-  }
-  header("Location: https://young-hollows-53465.herokuapp.com/07Teach/welcome.php");
-    exit();
-}else if(array_key_exists('SignUp', $_POST)){
-  header("Location: https://young-hollows-53465.herokuapp.com/07Teach/signUp.php");
+if(array_key_exists('SignUp', $_POST)) { 
+    $query = 'INSERT INTO public.teach_user(username, password, display_name) VALUES(:username, :password, :display_name)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username', $_POST['username']);
+    $statement->bindValue(':password', $_POST['password']);
+    $statement->bindValue(':display_name', $_POST['displayName']);
+    $statement->execute();
+    
+    header("Location: https://young-hollows-53465.herokuapp.com/07Teach/login.php");
     exit();
 }
 
 ?>
 
-<h1>Please Log In</h1>
+<h1>Please Create an Account</h1>
 
 
 
 <form method="post">
+Display Name: <input type="text" name="displayName"><br>
 username: <input type="text" name="username"><br>
 password: <input type="password" name="password"><br>
-<input type="submit" class="button" name="loginPost" value="Login"/><br>
 <input type="submit" class="button" name="SignUp" value="Sign Up"/><br>
 </form>
 
