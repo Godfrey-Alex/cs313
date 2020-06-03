@@ -35,7 +35,7 @@ catch (PDOException $ex)
 
 if(array_key_exists('loginPost', $_POST)) { 
   echo 'you hit login '.$_POST["username"];
-  $query = "SELECT id from public.teach_user where user_id = '".$_POST["username"]."' and password = '".$_POST["password"]."'";
+  $query = "SELECT id from public.teach_user where id = '".$_POST["username"]."' and password = '".$_POST["password"]."'";
   echo $query;
   $userIdResult = $db->query("SELECT id from public.teach_user where user_id = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
   while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
