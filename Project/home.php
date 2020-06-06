@@ -8,6 +8,7 @@
 
 <?php
 session_start();
+echo $_SESSION["currentUserId"];
 //$_SESSION["username"];
 //$_SESSION["password"];
 //$_SESSION["authenticated"] = false;
