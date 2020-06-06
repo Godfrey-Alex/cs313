@@ -37,7 +37,7 @@ if(array_key_exists('loginPost', $_POST)) {
   //echo 'you hit login '.$_POST["username"];
   //$query = "SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'";
   //echo $query;
-  $userIdResult = $db->query("SELECT id from public.teach_user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
+  $userIdResult = $db->query("SELECT id from public.user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
   while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
     echo $row['id'];
     $_SESSION['currentUserID'] = $row['id'];    
