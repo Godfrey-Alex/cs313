@@ -39,7 +39,7 @@ if(array_key_exists('loginPost', $_POST)) {
   //echo $query;
   $userIdResult = $db->query("SELECT id from public.user where username = '".$_POST["username"]."' and password = '".$_POST["password"]."'");
   while ($row = $userIdResult->fetch(PDO::FETCH_ASSOC)){
-    echo $row['id'];
+    //echo $row['id'];
     $_SESSION['currentUserID'] = $row['id'];    
   }
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
