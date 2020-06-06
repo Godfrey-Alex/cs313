@@ -8,11 +8,11 @@
 
 <?php
 session_start();
-$_SESSION["username"];
-$_SESSION["password"];
-$_SESSION["authenticated"] = false;
+//$_SESSION["username"];
+//$_SESSION["password"];
+//$_SESSION["authenticated"] = false;
 //$_SESSION["currentUserId"] = '';
-$_SESSION["viewFriendId"]=1;
+//$_SESSION["viewFriendId"]=1;
 
 
 /*if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,23 +31,20 @@ $_SESSION["viewFriendId"]=1;
     }
 }
 */
-if(isset($_POST["loginPost"])){
-  $_SESSION["username"] = $_POST['username'];
-  $_SESSION["password"] = $_POST['password'];
-  if (empty($username)) {
+//if(isset($_POST["loginPost"])){
+  //$_SESSION["username"] = $_POST['username'];
+  //$_SESSION["password"] = $_POST['password'];
+  //if (empty($username)) {
       //echo "No username was entered";
-  } else {
+  //} else {
       //echo $username;
-  }
-  if (empty($password)) {
+  //}
+  //if (empty($password)) {
       //echo "No password was entered";
-  } else {
+  //} else {
       //echo $password;
-  }
-}
-
-
-
+  //}
+//}
 try
 {
   $dbUrl = getenv('DATABASE_URL');
