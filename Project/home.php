@@ -95,12 +95,12 @@ if(isset($_POST["addNewFriend"])){
 
 <h1>
 <?php
-foreach ($db->query("SELECT * FROM public.user WHERE username ='".$_SESSION["username"]."' and password = '".$_SESSION["password"]."'") as $row){
-  echo 'Welcome ' . $row['display_name'];
-  $_SESSION["currentUserId"] = $row['id'];
+//foreach ($db->query("SELECT * FROM public.user WHERE username ='".$_SESSION["username"]."' and password = '".$_SESSION["password"]."'") as $row){
+  //echo 'Welcome ' . $row['display_name'];
+  //$_SESSION["currentUserId"] = $row['id'];
   //echo '' . $_SESSION["currentUserId"];  
-  echo '<br/>';
-}
+  //echo '<br/>';
+//}
 ?>
 </h1>
 
