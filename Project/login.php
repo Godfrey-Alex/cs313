@@ -42,7 +42,7 @@ if(array_key_exists('loginPost', $_POST)) {
     echo $row['id'];
     $_SESSION['currentUserID'] = $row['id'];    
   }
-  header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
+  //header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
     exit();
 }else if(array_key_exists('SignUp', $_POST)){
   header("Location: https://young-hollows-53465.herokuapp.com/Project/signUp.php");
