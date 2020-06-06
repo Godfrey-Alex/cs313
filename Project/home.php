@@ -90,7 +90,7 @@ if(isset($_POST["addNewFriend"])){
   $statement->execute();
   unset($_POST["addNewFriend"]);
 }
-//print_r($_SESSION);
+print_r($_SESSION);
 ?>
 
 <h1>
