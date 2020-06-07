@@ -1,53 +1,41 @@
-psql postgres://eddiqnsuurvaga:7b2cebaa9ac7155293b821bb1092f8e25ec7301cea6a5ac5e7152c1115185e31@ec2-52-0-155-79.compute-1.amazonaws.com:5432/d383r7mmvegu51
-
+CREATE SEQUENCE user_id_seq;
 CREATE TABLE public.user
 (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id INTEGER DEFAULT NEXTVAL('user_id_seq')UNIQUE,
 	username VARCHAR(100) NOT NULL UNIQUE,
 	password VARCHAR(100) NOT NULL,
 	display_name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO public.user (username, password, display_name)
-VALUES ('alexgodfrey', 'password1', 'Alex Godfrey');
-
+CREATE SEQUENCE friend_id_seq;
 CREATE TABLE public.friend
 (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id INTEGER DEFAULT NEXTVAL('friend_id_seq') UNIQUE,
 	display_name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO public.friend (display_name)
-VALUES ('Brittany Godfrey');
-
+CREATE SEQUENCE user_friend_id_seq;
 CREATE TABLE public.user_friend_list
 (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id INTEGER DEFAULT NEXTVAL('user_friend_id_seq')UNIQUE,
 	user_id INT NOT NULL REFERENCES public.user(id),
 	friend_id INT NOT NULL REFERENCES public.friend(id)
 );
 
-INSERT INTO public.user_friend_list (user_id, friend_id)
-VALUES (1,1);
-
+CREATE SEQUENCE memory_id_seq;
 CREATE TABLE public.memory
 (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id INTEGER DEFAULT NEXTVAL('memory_id_seq')UNIQUE,
 	memory_name VARCHAR(25) NOT NULL,
 	memory_date DATE NOT NULL,
 	memory_text TEXT NOT NULL
 );
 
-INSERT INTO public.memory (memory_name, memory_date, memory_text)
-VALUES ('Wedding','2013-5-25', 'We got marries at it was super awesome');
-
+CREATE SEQUENCE memory_list_id_seq;
 CREATE TABLE public.memory_list
 (
-	id SERIAL NOT NULL PRIMARY KEY,
+	id INTEGER DEFAULT NEXTVAL('memory_list_id_seq')UNIQUE,
 	user_id INT NOT NULL REFERENCES public.user(id),
 	friend_id INT NOT NULL REFERENCES public.friend(id),
 	memory_id INT NOT NULL REFERENCES public.memory(id)	
 );
-
-INSERT INTO public.memory_list (user_id, friend_id, memory_id)
-VALUES (1,1, 1);
