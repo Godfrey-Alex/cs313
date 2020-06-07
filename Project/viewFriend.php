@@ -43,6 +43,9 @@ catch (PDOException $ex)
 }
 
 ?>
+<div class="topnav">
+  <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
+</div>
 
 <h1>Hello Friend</h1>
 <h2>

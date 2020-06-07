@@ -54,7 +54,9 @@ if(array_key_exists('addFriend', $_POST)) {
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
 ?>
-
+<div class="topnav">
+  <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
+</div>
 <h1>Please give the name of your new friend.</h1>
 
 

@@ -69,7 +69,9 @@ if(array_key_exists('addMemory', $_POST)) {
   } 
 
 ?>
-
+<div class="topnav">
+  <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
+</div>
 <h1>New Memory</h1>
 <h3>Please tell about a memory with your friend</h3>
 
