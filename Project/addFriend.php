@@ -33,6 +33,11 @@ catch (PDOException $ex)
 }
 print_r($_SESSION);
 
+if(array_key_exists('logout', $_POST)) {
+  unset($_SESSION["currentUserID"]);
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/login.php");
+}
+
 if(array_key_exists('addFriend', $_POST)) { 
   echo $_POST['nfDisplay_name'];
   $nFriend = $_POST['nfDisplay_name'];
@@ -54,6 +59,11 @@ if(array_key_exists('addFriend', $_POST)) {
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
 ?>
+
+<form method="post">    
+<input type="submit" class="button" name="logout" value="Logout" /><br><br>
+</form>
+
 <div class="topnav">
   <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
 </div>
