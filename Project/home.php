@@ -92,6 +92,10 @@ echo 'currurnt user id: ' .$_SESSION['currentUserID'];
 //print_r($_SESSION);
 ?>
 
+<div class="topnav">
+  <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
+</div>
+
 <h1>
 <?php
 //foreach ($db->query("SELECT * FROM public.user WHERE username ='".$_SESSION["username"]."' and password = '".$_SESSION["password"]."'") as $row){
