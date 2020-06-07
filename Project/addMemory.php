@@ -15,7 +15,8 @@ $friendButton = $_POST[''];
 //echo 'current user id: ' .$_SESSION["currentUserId"];
 
 //print_r($_SESSION);
-//echo $_SESSION["currentUserId"];
+echo $_SESSION["currentUserID"];
+echo $_SESSION["viewFriendId"];
 
 try
 {
