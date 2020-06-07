@@ -68,7 +68,7 @@ catch (PDOException $ex)
   die();
 }
 
-echo $_SESSION["currentUserId"];
+echo 'currurnt user id: ' .$_SESSION["currentUserId"];
 
 /*if(isset($_POST["addNewFriend"])){
   echo "you just added a friend ".$_POST["nfDisplay_name"];
