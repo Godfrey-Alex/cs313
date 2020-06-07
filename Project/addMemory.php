@@ -9,14 +9,7 @@
 <?php
 session_start();
 $friendId = $_POST['radioFriendId'];
-//$_SESSION["viewFriendId"]=$_POST['radioFriendId'];
-//echo 'friend id: '.$friendId;
 $friendButton = $_POST[''];
-//echo 'current user id: ' .$_SESSION["currentUserId"];
-
-//print_r($_SESSION);
-echo 'userid: ' .$_SESSION["currentUserID"];
-echo ' friend id: ' .$_SESSION["viewFriendId"];
 
 try
 {
