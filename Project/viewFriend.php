@@ -57,7 +57,7 @@ foreach ($db->query("SELECT display_name FROM public.friend WHERE id = '".$_SESS
 <h3>Memories</h3>
 
 <?php
-$memoryIds = $db->query("SELECT memory_id from public.memory_list where user_id = '".$_SESSION["currentUserId"]."' and friend_id = '".$_SESSION["viewFriendId"]."'");
+$memoryIds = $db->query("SELECT memory_id from public.memory_list where user_id = '".$_SESSION["currentUserID"]."' and friend_id = '".$_SESSION["viewFriendId"]."'");
 $memoryIdList='';
 while ($row = $memoryIds->fetch(PDO::FETCH_ASSOC)){
   $memoryIdList .= $row['memory_id'] .=', ';
