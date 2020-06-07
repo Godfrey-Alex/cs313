@@ -68,7 +68,15 @@ if(array_key_exists('addMemory', $_POST)) {
   header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
 
+  if(array_key_exists('logout', $_POST)) {
+    unset($_SESSION["currentUserID"]);
+    header("Location: https://young-hollows-53465.herokuapp.com/Project/login.php");
+  }
+
 ?>
+<form method="post">    
+<input type="submit" class="button" name="logout" value="Logout" /><br><br>
+</form>
 <div class="topnav">
   <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
 </div>

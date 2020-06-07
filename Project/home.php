@@ -90,7 +90,13 @@ echo 'currurnt user id: ' .$_SESSION['currentUserID'];
 }
 */
 //print_r($_SESSION);
+if(array_key_exists('logout', $_POST)) {
+  unset($_SESSION["currentUserID"]);
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/login.php");
+}
 ?>
+
+
 
 <div class="topnav">
   <a href="https://young-hollows-53465.herokuapp.com/Project/home.php">Home</a>
@@ -106,6 +112,10 @@ echo 'currurnt user id: ' .$_SESSION['currentUserID'];
 //}
 ?>
 </h1>
+
+<form method="post">    
+<input type="submit" class="button" name="logout" value="Logout" /><br><br>
+</form>
 
 <h3>Behold your friends:</h3>
 
