@@ -15,8 +15,8 @@ $friendButton = $_POST[''];
 //echo 'current user id: ' .$_SESSION["currentUserId"];
 
 //print_r($_SESSION);
-echo $_SESSION["currentUserID"];
-echo $_SESSION["viewFriendId"];
+echo 'userid: ' .$_SESSION["currentUserID"];
+echo ' friend id: ' .$_SESSION["viewFriendId"];
 
 try
 {
@@ -65,7 +65,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement->bindValue(':memory_id', $lastMemoryId);
   $statement->execute();
 
-  header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/viewFriend.php");
   } 
 
 ?>
