@@ -65,7 +65,7 @@ if(array_key_exists('addMemory', $_POST)) {
   $statement->bindValue(':memory_id', $lastMemoryId);
   $statement->execute();
 
-  header("Location: https://young-hollows-53465.herokuapp.com/Project/viewFriend.php");
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/home.php");
   } 
 
 ?>
