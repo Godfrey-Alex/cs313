@@ -8,8 +8,11 @@
 
 <?php
 session_start();
+echo 'current user id top' .$_SESSION['currentUserID'];
 $friendId = $_POST['radioFriendId'];
-$_SESSION["viewFriendId"]=$_POST['radioFriendId'];
+echo 'friend id ' .$friendId;
+$_SESSION['viewFriendId']=$_POST['radioFriendId'];
+echo 'view friend id ' .$_SESSION['viewFriendId'];
 //echo 'friend id: '.$friendId;
 $friendButton = $_POST[''];
 //echo 'current user id: ' .$_SESSION["currentUserId"];
