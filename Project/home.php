@@ -68,7 +68,7 @@ catch (PDOException $ex)
   die();
 }
 
-echo 'currurnt user id: ' .$_SESSION["currentUserId"];
+echo 'currurnt user id: ' .$_SESSION['currentUserID'];
 
 /*if(isset($_POST["addNewFriend"])){
   echo "you just added a friend ".$_POST["nfDisplay_name"];
@@ -106,7 +106,7 @@ echo 'currurnt user id: ' .$_SESSION["currentUserId"];
 <h3>Behold your friends:</h3>
 
 <?php
-$friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION["currentUserId"]."'");
+$friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION['currentUserID']."'");
 $friendIdList;
 while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
   echo $row['friend_id'];
