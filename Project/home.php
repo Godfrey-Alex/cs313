@@ -31,6 +31,10 @@ catch (PDOException $ex)
   die();
 }
 
+if(!isset($_SESSION['currentUserID'])){
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/login.php");
+}
+
 
 if(array_key_exists('logout', $_POST)) {
   unset($_SESSION["currentUserID"]);
