@@ -82,7 +82,7 @@ New Friend Name: <input type="text" name="nfDisplay_name"><br>
 
 <form method="post">  
 New Friend Name: <input type="text" name="nfDisplay_name"><br>  
-<input type="submit" class="button" name="addFriend" value="Add Memory" /><br><br>
+<input type="submit" class="button" name="addFriend" value="Add Friend" /><br><br>
 </form>
 
 
