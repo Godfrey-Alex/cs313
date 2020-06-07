@@ -109,6 +109,7 @@ echo $_SESSION["currentUserId"];
 $friendids = $db->query("SELECT friend_id from public.user_friend_list where user_id = '".$_SESSION["currentUserId"]."'");
 $friendIdList;
 while ($row = $friendids->fetch(PDO::FETCH_ASSOC)){
+  echo $row['friend_id'];
   $friendIdList .= $row['friend_id'] .=', ';
 }
 $friendIdList .= '0';
