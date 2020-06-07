@@ -33,6 +33,10 @@ catch (PDOException $ex)
   die();
 }
 
+if(!isset($_SESSION['currentUserID'])){
+  header("Location: https://young-hollows-53465.herokuapp.com/Project/login.php");
+}
+
 if(array_key_exists('addMemory', $_POST)) { 
   $mTitle = $_POST['mTitle'];
   $mDate = $_POST['mDate'];
